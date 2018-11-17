@@ -1,0 +1,1451 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="c:\dev\bin\fxcop\Xml\FxCopReport.xsl"?>
+<FxCopReport Version="1.36">
+ <Targets>
+  <Target Name="$(ProjectDir)/../SPSProfessional.SharePoint.Framework/bin/Debug/SPSProfessional.SharePoint.Framework.dll">
+   <Modules>
+    <Module Name="spsprofessional.sharepoint.framework.dll">
+     <Messages>
+      <Message TypeName="MarkAssembliesWithClsCompliant" Category="Microsoft.Design" CheckId="CA1014" Status="Active" Created="2008-09-14 22:34:59Z" FixCategory="NonBreaking">
+       <Issue Certainty="95" Level="Error">Mark 'SPSProfessional.SharePoint.Framework.dll' with CLSCompliant(true) because it exposes externally visible types.</Issue>
+      </Message>
+     </Messages>
+     <Namespaces>
+      <Namespace Name="SPSProfessional.SharePoint.Framework.Comms">
+       <Types>
+        <Type Name="SPSDataValuesCollection" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Messages>
+          <Message TypeName="ImplementSerializationConstructors" Category="Microsoft.Usage" CheckId="CA2229" Status="Active" Created="2008-09-14 22:34:59Z" FixCategory="NonBreaking">
+           <Issue Name="MakeUnsealedMagicConstructorFamily" Certainty="95" Level="Error">Declare the serialization constructor of 'SPSDataValuesCollection', an unsealed type, as protected.</Issue>
+          </Message>
+         </Messages>
+        </Type>
+        <Type Name="SPSSchemaBuilder" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#GetDataView()" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="UsePropertiesWhereAppropriate" Category="Microsoft.Design" CheckId="CA1024" Status="Active" Created="2008-09-14 22:34:59Z" FixCategory="Breaking">
+             <Issue Certainty="50" Level="Warning" Path="C:\DEV\SPSProfessional2\SPSProfessional.SharePoint.Framework\SPSProfessional.SharePoint.Framework\Comms" File="SPSSchemaBuilder.cs" Line="71">Change 'SPSSchemaBuilder.GetDataView()' to a property if appropriate.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+       </Types>
+      </Namespace>
+      <Namespace Name="SPSProfessional.SharePoint.Framework.Controls">
+       <Types>
+        <Type Name="SPSBranchItem" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#ImageUrl" Kind="Property" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="UriPropertiesShouldNotBeStrings" Category="Microsoft.Design" CheckId="CA1056" Status="Active" Created="2008-09-14 22:34:59Z" FixCategory="Breaking">
+             <Issue Certainty="75" Level="Error" Path="C:\DEV\SPSProfessional2\SPSProfessional.SharePoint.Framework\SPSProfessional.SharePoint.Framework\Controls" File="SPSBranchItem.cs" Line="29">Change the type of property 'SPSBranchItem.ImageUrl' from string to System.Uri.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="SPSCalendarItem" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#DisplayFormUrl" Kind="Property" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="UriPropertiesShouldNotBeStrings" Category="Microsoft.Design" CheckId="CA1056" Status="Active" Created="2008-09-14 22:34:59Z" FixCategory="Breaking">
+             <Issue Certainty="75" Level="Error" Path="C:\DEV\SPSProfessional2\SPSProfessional.SharePoint.Framework\SPSProfessional.SharePoint.Framework\Controls" File="SPSCalendarItem.cs" Line="56">Change the type of property 'SPSCalendarItem.DisplayFormUrl' from string to System.Uri.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="SPSCalendarXML" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#Fill(Microsoft.SharePoint.WebControls.SPCalendarView)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="ConsiderPassingBaseTypesAsParameters" Category="Microsoft.Design" CheckId="CA1011" Status="Active" Created="2008-09-14 22:34:59Z" FixCategory="Breaking">
+             <Issue Certainty="50" Level="Error" Path="C:\DEV\SPSProfessional2\SPSProfessional.SharePoint.Framework\SPSProfessional.SharePoint.Framework\Controls" File="SPSCalendarXML.cs" Line="60">Consider changing the type of parameter 'calendarView' in 'SPSCalendarXML.Fill(SPCalendarView)' from 'SPCalendarView' to its base type 'BaseDataBoundControl'. This method appears to only require base class members in its implementation. Suppress this violation if there is a compelling reason to require the more derived type in the method signature.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#Items" Kind="Property" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="PropertiesShouldNotReturnArrays" Category="Microsoft.Performance" CheckId="CA1819" Status="Active" Created="2008-09-14 22:34:59Z" FixCategory="Breaking">
+             <Issue Certainty="50" Level="Warning" Path="C:\DEV\SPSProfessional2\SPSProfessional.SharePoint.Framework\SPSProfessional.SharePoint.Framework\Controls" File="SPSCalendarXML.cs" Line="23">Change 'SPSCalendarXML.Items' to return a collection or make it a method.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="SPSDateControl" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#OnPreRender(System.EventArgs)" Kind="Method" Static="False" Accessibility="Family" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="OverrideLinkDemandsShouldBeIdenticalToBase" Category="Microsoft.Security" CheckId="CA2123" Status="Active" Created="2008-09-14 22:34:59Z" FixCategory="Breaking">
+             <Issue Name="BaseOnly" Certainty="33" Level="CriticalError" Path="C:\DEV\SPSProfessional2\SPSProfessional.SharePoint.Framework\SPSProfessional.SharePoint.Framework\Controls" File="SPSDateControl.cs" Line="22">Add the following security attribute to 'SPSDateControl.OnPreRender(EventArgs)' in order to match a LinkDemand on base method 'DateTimeControl.OnPreRender(EventArgs)':  [AspNetHostingPermission(SecurityAction.LinkDemand, Level = AspNetHostingPermissionLevel.Minimal)].</Issue>
+             <Issue Name="BaseOnly" Certainty="33" Level="CriticalError" Path="C:\DEV\SPSProfessional2\SPSProfessional.SharePoint.Framework\SPSProfessional.SharePoint.Framework\Controls" File="SPSDateControl.cs" Line="22">Add the following security attribute to 'SPSDateControl.OnPreRender(EventArgs)' in order to match a LinkDemand on base method 'DateTimeControl.OnPreRender(EventArgs)':  [SharePointPermission(SecurityAction.LinkDemand, ObjectModel = true)].</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="SPSECBMenu" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#MenuItems" Kind="Property" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="DoNotExposeGenericLists" Category="Microsoft.Design" CheckId="CA1002" Status="Active" Created="2008-09-14 22:34:59Z" FixCategory="Breaking">
+             <Issue Certainty="95" Level="Error" Path="C:\DEV\SPSProfessional2\SPSProfessional.SharePoint.Framework\SPSProfessional.SharePoint.Framework\Controls" File="SPSECBMenu.cs" Line="48">Change 'List&lt;SPSECBMenuItem&gt;' in 'SPSECBMenu.MenuItems' to use Collection&lt;T&gt;, ReadOnlyCollection&lt;T&gt; or KeyedCollection&lt;K,V&gt;</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="SPSECBMenuItem" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#.ctor(System.String,System.String,System.String,System.String,Microsoft.SharePoint.SPBasePermissions,System.Int32)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message Id="2#" TypeName="UriParametersShouldNotBeStrings" Category="Microsoft.Design" CheckId="CA1054" Status="Active" Created="2008-09-14 22:34:59Z" FixCategory="Breaking">
+             <Issue Certainty="60" Level="Error" Path="C:\DEV\SPSProfessional2\SPSProfessional.SharePoint.Framework\SPSProfessional.SharePoint.Framework\Controls" File="SPSECBMenuItem.cs" Line="62">Change the type of parameter 'urlAction' of method 'SPSECBMenuItem.SPSECBMenuItem(string, string, string, string, SPBasePermissions, int)' from string to System.Uri, or provide an overload of 'SPSECBMenuItem.SPSECBMenuItem(string, string, string, string, SPBasePermissions, int)', that allows 'urlAction' to be passed as a System.Uri object.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#UrlAction" Kind="Property" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="UriPropertiesShouldNotBeStrings" Category="Microsoft.Design" CheckId="CA1056" Status="Active" Created="2008-09-14 22:34:59Z" FixCategory="Breaking">
+             <Issue Certainty="75" Level="Error" Path="C:\DEV\SPSProfessional2\SPSProfessional.SharePoint.Framework\SPSProfessional.SharePoint.Framework\Controls" File="SPSECBMenuItem.cs" Line="35">Change the type of property 'SPSECBMenuItem.UrlAction' from string to System.Uri.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#UrlActionProcessed(System.String)" Kind="Method" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message Id="System.String.StartsWith(System.String)" TypeName="SpecifyStringComparison" Category="Microsoft.Globalization" CheckId="CA1307" Status="Active" Created="2008-09-14 22:34:59Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Error" Path="C:\DEV\SPSProfessional2\SPSProfessional.SharePoint.Framework\SPSProfessional.SharePoint.Framework\Controls" File="SPSECBMenuItem.cs" Line="85">'SPSECBMenuItem.UrlActionProcessed(string)' makes a call to 'string.StartsWith(string)' that does not explicitly provide a StringComparison. This should be replaced with a call to 'string.StartsWith(string, StringComparison)'.</Issue>
+             <Issue Certainty="95" Level="Error" Path="C:\DEV\SPSProfessional2\SPSProfessional.SharePoint.Framework\SPSProfessional.SharePoint.Framework\Controls" File="SPSECBMenuItem.cs" Line="90">'SPSECBMenuItem.UrlActionProcessed(string)' makes a call to 'string.StartsWith(string)' that does not explicitly provide a StringComparison. This should be replaced with a call to 'string.StartsWith(string, StringComparison)'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="SPSErrorBoxControl" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#CustomError(System.String,System.Web.UI.HtmlTextWriter)" Kind="Method" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message Id="System.String.Format(System.String,System.Object,System.Object)" TypeName="SpecifyIFormatProvider" Category="Microsoft.Globalization" CheckId="CA1305" Status="Active" Created="2008-09-14 22:34:59Z" FixCategory="DependsOnFix">
+             <Issue Certainty="95" Level="Error" Path="C:\DEV\SPSProfessional2\SPSProfessional.SharePoint.Framework\SPSProfessional.SharePoint.Framework\Controls" File="SPSErrorBoxControl.cs" Line="217">Because the behavior of 'string.Format(string, object, object)' could vary based on the current user's locale settings, replace this call in 'SPSErrorBoxControl.CustomError(string, HtmlTextWriter)' with a call to 'string.Format(IFormatProvider, string, params object[])'. If the result of 'string.Format(IFormatProvider, string, params object[])' will be displayed to the user, specify 'CultureInfo.CurrentCulture' as the 'IFormatProvider' parameter. Otherwise, if the result will be stored and accessed by software, such as when it is persisted to disk or to a database, specify 'CultureInfo.InvariantCulture'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="SPSSPToolBarFactory" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Messages>
+          <Message TypeName="StaticHolderTypesShouldNotHaveConstructors" Category="Microsoft.Design" CheckId="CA1053" Status="Active" Created="2008-09-14 22:34:59Z" FixCategory="Breaking">
+           <Issue Certainty="90" Level="Error">Remove the public constructors from 'SPSSPToolBarFactory'.</Issue>
+          </Message>
+         </Messages>
+         <Members>
+          <Member Name="#GetToolBar(System.Web.UI.Page)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="ConsiderPassingBaseTypesAsParameters" Category="Microsoft.Design" CheckId="CA1011" Status="Active" Created="2008-09-14 22:34:59Z" FixCategory="Breaking">
+             <Issue Certainty="50" Level="Error" Path="C:\DEV\SPSProfessional2\SPSProfessional.SharePoint.Framework\SPSProfessional.SharePoint.Framework\Controls" File="SPSSPToolBarFactory.cs" Line="12">Consider changing the type of parameter 'page' in 'SPSSPToolBarFactory.GetToolBar(Page)' from 'Page' to its base type 'TemplateControl'. This method appears to only require base class members in its implementation. Suppress this violation if there is a compelling reason to require the more derived type in the method signature.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#GetToolBarButton(System.Web.UI.Page)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="ConsiderPassingBaseTypesAsParameters" Category="Microsoft.Design" CheckId="CA1011" Status="Active" Created="2008-09-14 22:34:59Z" FixCategory="Breaking">
+             <Issue Certainty="50" Level="Error" Path="C:\DEV\SPSProfessional2\SPSProfessional.SharePoint.Framework\SPSProfessional.SharePoint.Framework\Controls" File="SPSSPToolBarFactory.cs" Line="18">Consider changing the type of parameter 'page' in 'SPSSPToolBarFactory.GetToolBarButton(Page)' from 'Page' to its base type 'TemplateControl'. This method appears to only require base class members in its implementation. Suppress this violation if there is a compelling reason to require the more derived type in the method signature.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="SPSToolBarControl" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#AddToolBarActionButton(System.String,System.String,System.String,System.String)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message Id="System.String.Format(System.String,System.Object,System.Object,System.Object)" TypeName="SpecifyIFormatProvider" Category="Microsoft.Globalization" CheckId="CA1305" Status="Active" Created="2008-09-14 22:34:59Z" FixCategory="DependsOnFix">
+             <Issue Certainty="95" Level="Error" Path="C:\DEV\SPSProfessional2\SPSProfessional.SharePoint.Framework\SPSProfessional.SharePoint.Framework\Controls" File="SPSToolBarControl.cs" Line="165">Because the behavior of 'string.Format(string, object, object, object)' could vary based on the current user's locale settings, replace this call in 'SPSToolBarControl.AddToolBarActionButton(string, string, string, string)' with a call to 'string.Format(IFormatProvider, string, params object[])'. If the result of 'string.Format(IFormatProvider, string, params object[])' will be displayed to the user, specify 'CultureInfo.CurrentCulture' as the 'IFormatProvider' parameter. Otherwise, if the result will be stored and accessed by software, such as when it is persisted to disk or to a database, specify 'CultureInfo.InvariantCulture'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#AddToolBarActionButton(System.String,System.String,System.String,System.String,System.String)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message Id="System.String.Format(System.String,System.Object[])" TypeName="SpecifyIFormatProvider" Category="Microsoft.Globalization" CheckId="CA1305" Status="Active" Created="2008-09-14 22:34:59Z" FixCategory="DependsOnFix">
+             <Issue Certainty="95" Level="Error" Path="C:\DEV\SPSProfessional2\SPSProfessional.SharePoint.Framework\SPSProfessional.SharePoint.Framework\Controls" File="SPSToolBarControl.cs" Line="207">Because the behavior of 'string.Format(string, params object[])' could vary based on the current user's locale settings, replace this call in 'SPSToolBarControl.AddToolBarActionButton(string, string, string, string, string)' with a call to 'string.Format(IFormatProvider, string, params object[])'. If the result of 'string.Format(IFormatProvider, string, params object[])' will be displayed to the user, specify 'CultureInfo.CurrentCulture' as the 'IFormatProvider' parameter. Otherwise, if the result will be stored and accessed by software, such as when it is persisted to disk or to a database, specify 'CultureInfo.InvariantCulture'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#AddToolBarActionButton(System.String,System.String,System.String,System.String,System.String,System.String)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message Id="System.String.Format(System.String,System.Object[])" TypeName="SpecifyIFormatProvider" Category="Microsoft.Globalization" CheckId="CA1305" Status="Active" Created="2008-09-14 22:34:59Z" FixCategory="DependsOnFix">
+             <Issue Certainty="95" Level="Error" Path="C:\DEV\SPSProfessional2\SPSProfessional.SharePoint.Framework\SPSProfessional.SharePoint.Framework\Controls" File="SPSToolBarControl.cs" Line="239">Because the behavior of 'string.Format(string, params object[])' could vary based on the current user's locale settings, replace this call in 'SPSToolBarControl.AddToolBarActionButton(string, string, string, string, string, string)' with a call to 'string.Format(IFormatProvider, string, params object[])'. If the result of 'string.Format(IFormatProvider, string, params object[])' will be displayed to the user, specify 'CultureInfo.CurrentCulture' as the 'IFormatProvider' parameter. Otherwise, if the result will be stored and accessed by software, such as when it is persisted to disk or to a database, specify 'CultureInfo.InvariantCulture'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#AddToolbarButton(System.String,System.String,System.String,System.String,System.String)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message Id="System.String.Format(System.String,System.Object,System.Object,System.Object)" TypeName="SpecifyIFormatProvider" Category="Microsoft.Globalization" CheckId="CA1305" Status="Active" Created="2008-09-14 22:34:59Z" FixCategory="DependsOnFix">
+             <Issue Certainty="95" Level="Error" Path="C:\DEV\SPSProfessional2\SPSProfessional.SharePoint.Framework\SPSProfessional.SharePoint.Framework\Controls" File="SPSToolBarControl.cs" Line="308">Because the behavior of 'string.Format(string, object, object, object)' could vary based on the current user's locale settings, replace this call in 'SPSToolBarControl.AddToolbarButton(string, string, string, string, string)' with a call to 'string.Format(IFormatProvider, string, params object[])'. If the result of 'string.Format(IFormatProvider, string, params object[])' will be displayed to the user, specify 'CultureInfo.CurrentCulture' as the 'IFormatProvider' parameter. Otherwise, if the result will be stored and accessed by software, such as when it is persisted to disk or to a database, specify 'CultureInfo.InvariantCulture'.</Issue>
+            </Message>
+            <Message Id="System.String.Format(System.String,System.Object[])" TypeName="SpecifyIFormatProvider" Category="Microsoft.Globalization" CheckId="CA1305" Status="Active" Created="2008-09-14 22:34:59Z" FixCategory="DependsOnFix">
+             <Issue Certainty="95" Level="Error" Path="C:\DEV\SPSProfessional2\SPSProfessional.SharePoint.Framework\SPSProfessional.SharePoint.Framework\Controls" File="SPSToolBarControl.cs" Line="298">Because the behavior of 'string.Format(string, params object[])' could vary based on the current user's locale settings, replace this call in 'SPSToolBarControl.AddToolbarButton(string, string, string, string, string)' with a call to 'string.Format(IFormatProvider, string, params object[])'. If the result of 'string.Format(IFormatProvider, string, params object[])' will be displayed to the user, specify 'CultureInfo.CurrentCulture' as the 'IFormatProvider' parameter. Otherwise, if the result will be stored and accessed by software, such as when it is persisted to disk or to a database, specify 'CultureInfo.InvariantCulture'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="SPSTreeXML" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#BranchItems" Kind="Property" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="PropertiesShouldNotReturnArrays" Category="Microsoft.Performance" CheckId="CA1819" Status="Active" Created="2008-09-14 22:34:59Z" FixCategory="Breaking">
+             <Issue Certainty="50" Level="Warning" Path="C:\DEV\SPSProfessional2\SPSProfessional.SharePoint.Framework\SPSProfessional.SharePoint.Framework\Controls" File="SPSTreeXML.cs" Line="31">Change 'SPSTreeXML.BranchItems' to return a collection or make it a method.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#Fill(System.Web.UI.WebControls.TreeView,System.Data.DataView)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message Id="System.String.Format(System.String,System.Object)" TypeName="SpecifyIFormatProvider" Category="Microsoft.Globalization" CheckId="CA1305" Status="Active" Created="2008-09-14 22:34:59Z" FixCategory="DependsOnFix">
+             <Issue Certainty="95" Level="Error" Path="C:\DEV\SPSProfessional2\SPSProfessional.SharePoint.Framework\SPSProfessional.SharePoint.Framework\Controls" File="SPSTreeXML.cs" Line="157">Because the behavior of 'string.Format(string, object)' could vary based on the current user's locale settings, replace this call in 'SPSTreeXML.Fill(TreeView, DataView)' with a call to 'string.Format(IFormatProvider, string, params object[])'. If the result of 'string.Format(IFormatProvider, string, params object[])' will be displayed to the user, specify 'CultureInfo.CurrentCulture' as the 'IFormatProvider' parameter. Otherwise, if the result will be stored and accessed by software, such as when it is persisted to disk or to a database, specify 'CultureInfo.InvariantCulture'.</Issue>
+            </Message>
+            <Message Id="System.String.StartsWith(System.String)" TypeName="SpecifyStringComparison" Category="Microsoft.Globalization" CheckId="CA1307" Status="Active" Created="2008-09-14 22:34:59Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Error" Path="C:\DEV\SPSProfessional2\SPSProfessional.SharePoint.Framework\SPSProfessional.SharePoint.Framework\Controls" File="SPSTreeXML.cs" Line="212">'SPSTreeXML.Fill(TreeView, DataView)' makes a call to 'string.StartsWith(string)' that does not explicitly provide a StringComparison. This should be replaced with a call to 'string.StartsWith(string, StringComparison)'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="SPSWebPart" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#EditorParts" Kind="Property" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="DoNotExposeGenericLists" Category="Microsoft.Design" CheckId="CA1002" Status="Active" Created="2008-09-14 22:34:59Z" FixCategory="Breaking">
+             <Issue Certainty="95" Level="Error" Path="C:\DEV\SPSProfessional2\SPSProfessional.SharePoint.Framework\SPSProfessional.SharePoint.Framework\Controls" File="SPSWebPart.cs" Line="125">Change 'List&lt;EditorPart&gt;' in 'SPSWebPart.EditorParts' to use Collection&lt;T&gt;, ReadOnlyCollection&lt;T&gt; or KeyedCollection&lt;K,V&gt;</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#MissingConfiguration" Kind="Property" Static="False" Accessibility="Family" ExternallyVisible="True">
+           <Accessors>
+            <Accessor Name="#get_MissingConfiguration()" Kind="Method" Static="False" Accessibility="Family" ExternallyVisible="True">
+             <Messages>
+              <Message Id="System.String.Format(System.String,System.Object)" TypeName="SpecifyIFormatProvider" Category="Microsoft.Globalization" CheckId="CA1305" Status="Active" Created="2008-09-14 22:34:59Z" FixCategory="DependsOnFix">
+               <Issue Certainty="95" Level="Error" Path="C:\DEV\SPSProfessional2\SPSProfessional.SharePoint.Framework\SPSProfessional.SharePoint.Framework\Controls" File="SPSWebPart.cs" Line="159">Because the behavior of 'string.Format(string, object)' could vary based on the current user's locale settings, replace this call in 'SPSWebPart.MissingConfiguration.get()' with a call to 'string.Format(IFormatProvider, string, params object[])'. If the result of 'string.Format(IFormatProvider, string, params object[])' will be displayed to the user, specify 'CultureInfo.CurrentCulture' as the 'IFormatProvider' parameter. Otherwise, if the result will be stored and accessed by software, such as when it is persisted to disk or to a database, specify 'CultureInfo.InvariantCulture'.</Issue>
+              </Message>
+              <Message Id="System.String.Format(System.String,System.Object,System.Object)" TypeName="SpecifyIFormatProvider" Category="Microsoft.Globalization" CheckId="CA1305" Status="Active" Created="2008-09-14 22:34:59Z" FixCategory="DependsOnFix">
+               <Issue Certainty="95" Level="Error" Path="C:\DEV\SPSProfessional2\SPSProfessional.SharePoint.Framework\SPSProfessional.SharePoint.Framework\Controls" File="SPSWebPart.cs" Line="159">Because the behavior of 'string.Format(string, object, object)' could vary based on the current user's locale settings, replace this call in 'SPSWebPart.MissingConfiguration.get()' with a call to 'string.Format(IFormatProvider, string, params object[])'. If the result of 'string.Format(IFormatProvider, string, params object[])' will be displayed to the user, specify 'CultureInfo.CurrentCulture' as the 'IFormatProvider' parameter. Otherwise, if the result will be stored and accessed by software, such as when it is persisted to disk or to a database, specify 'CultureInfo.InvariantCulture'.</Issue>
+              </Message>
+              <Message Id="System.String.Format(System.String,System.Object[])" TypeName="SpecifyIFormatProvider" Category="Microsoft.Globalization" CheckId="CA1305" Status="Active" Created="2008-09-14 22:34:59Z" FixCategory="DependsOnFix">
+               <Issue Certainty="95" Level="Error" Path="C:\DEV\SPSProfessional2\SPSProfessional.SharePoint.Framework\SPSProfessional.SharePoint.Framework\Controls" File="SPSWebPart.cs" Line="164">Because the behavior of 'string.Format(string, params object[])' could vary based on the current user's locale settings, replace this call in 'SPSWebPart.MissingConfiguration.get()' with a call to 'string.Format(IFormatProvider, string, params object[])'. If the result of 'string.Format(IFormatProvider, string, params object[])' will be displayed to the user, specify 'CultureInfo.CurrentCulture' as the 'IFormatProvider' parameter. Otherwise, if the result will be stored and accessed by software, such as when it is persisted to disk or to a database, specify 'CultureInfo.InvariantCulture'.</Issue>
+              </Message>
+             </Messages>
+            </Accessor>
+           </Accessors>
+          </Member>
+          <Member Name="#Render(System.Web.UI.HtmlTextWriter)" Kind="Method" Static="False" Accessibility="Family" ExternallyVisible="True">
+           <Messages>
+            <Message Id="System.String.Format(System.String,System.Object,System.Object,System.Object)" TypeName="SpecifyIFormatProvider" Category="Microsoft.Globalization" CheckId="CA1305" Status="Active" Created="2008-09-14 22:34:59Z" FixCategory="DependsOnFix">
+             <Issue Certainty="95" Level="Error" Path="C:\DEV\SPSProfessional2\SPSProfessional.SharePoint.Framework\SPSProfessional.SharePoint.Framework\Controls" File="SPSWebPart.cs" Line="288">Because the behavior of 'string.Format(string, object, object, object)' could vary based on the current user's locale settings, replace this call in 'SPSWebPart.Render(HtmlTextWriter)' with a call to 'string.Format(IFormatProvider, string, params object[])'. If the result of 'string.Format(IFormatProvider, string, params object[])' will be displayed to the user, specify 'CultureInfo.CurrentCulture' as the 'IFormatProvider' parameter. Otherwise, if the result will be stored and accessed by software, such as when it is persisted to disk or to a database, specify 'CultureInfo.InvariantCulture'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="SPSXsltCalendarControl" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#CreateChildControls()" Kind="Method" Static="False" Accessibility="Family" ExternallyVisible="True">
+           <Messages>
+            <Message Id="System.String.ToLower" TypeName="SpecifyCultureInfo" Category="Microsoft.Globalization" CheckId="CA1304" Status="Active" Created="2008-09-14 22:34:59Z" FixCategory="DependsOnFix">
+             <Issue Certainty="95" Level="Error" Path="C:\DEV\SPSProfessional2\SPSProfessional.SharePoint.Framework\SPSProfessional.SharePoint.Framework\Controls" File="SPSXsltCalendarControl.cs" Line="48">Because the behavior of 'string.ToLower()' could vary based on the current user's locale settings, replace this call in 'SPSXsltCalendarControl.CreateChildControls()' with a call to 'string.ToLower(CultureInfo)'. If the result of 'string.ToLower(CultureInfo)' will be displayed to the user, specify 'CultureInfo.CurrentCulture' as the 'CultureInfo' parameter. Otherwise, if the result will be stored and accessed by software, such as when it is persisted to disk or to a database, specify 'CultureInfo.InvariantCulture'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#GetCalendarXML()" Kind="Method" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="DoNotCatchGeneralExceptionTypes" Category="Microsoft.Design" CheckId="CA1031" Status="Active" Created="2008-09-14 22:34:59Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="CriticalError" Path="C:\DEV\SPSProfessional2\SPSProfessional.SharePoint.Framework\SPSProfessional.SharePoint.Framework\Controls" File="SPSXsltCalendarControl.cs" Line="126">Modify 'SPSXsltCalendarControl.GetCalendarXML()' to catch a more specific exception than 'Exception' or rethrow the exception.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#OnPreRender(System.EventArgs)" Kind="Method" Static="False" Accessibility="Family" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="DoNotCatchGeneralExceptionTypes" Category="Microsoft.Design" CheckId="CA1031" Status="Active" Created="2008-09-14 22:34:59Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="CriticalError" Path="C:\DEV\SPSProfessional2\SPSProfessional.SharePoint.Framework\SPSProfessional.SharePoint.Framework\Controls" File="SPSXsltCalendarControl.cs" Line="86">Modify 'SPSXsltCalendarControl.OnPreRender(EventArgs)' to catch a more specific exception than 'Exception' or rethrow the exception.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="SPSXsltControl" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#GetDesignTimeHtml()" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message Id="System.IO.StringWriter.#ctor" TypeName="SpecifyIFormatProvider" Category="Microsoft.Globalization" CheckId="CA1305" Status="Active" Created="2008-09-14 22:34:59Z" FixCategory="DependsOnFix">
+             <Issue Certainty="95" Level="Error" Path="C:\DEV\SPSProfessional2\SPSProfessional.SharePoint.Framework\SPSProfessional.SharePoint.Framework\Controls" File="SPSXsltControl.cs" Line="268">Because the behavior of 'StringWriter.StringWriter()' could vary based on the current user's locale settings, replace this call in 'SPSXsltControl.GetDesignTimeHtml()' with a call to 'StringWriter.StringWriter(IFormatProvider)'. If the result of 'StringWriter.StringWriter(IFormatProvider)' will be displayed to the user, specify 'CultureInfo.CurrentCulture' as the 'IFormatProvider' parameter. Otherwise, if the result will be stored and accessed by software, such as when it is persisted to disk or to a database, specify 'CultureInfo.InvariantCulture'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#LastRow" Kind="Property" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="CollectionPropertiesShouldBeReadOnly" Category="Microsoft.Usage" CheckId="CA2227" Status="Active" Created="2008-09-14 22:34:59Z" FixCategory="Breaking">
+             <Issue Certainty="75" Level="Warning" Path="C:\DEV\SPSProfessional2\SPSProfessional.SharePoint.Framework\SPSProfessional.SharePoint.Framework\Controls" File="SPSXsltControl.cs" Line="86">Change 'SPSXsltControl.LastRow' to be read-only by removing the property setter.</Issue>
+            </Message>
+            <Message TypeName="DoNotExposeGenericLists" Category="Microsoft.Design" CheckId="CA1002" Status="Active" Created="2008-09-14 22:34:59Z" FixCategory="Breaking">
+             <Issue Certainty="95" Level="Error" Path="C:\DEV\SPSProfessional2\SPSProfessional.SharePoint.Framework\SPSProfessional.SharePoint.Framework\Controls" File="SPSXsltControl.cs" Line="86">Change 'SPSKeyValueList' in 'SPSXsltControl.LastRow' to use Collection&lt;T&gt;, ReadOnlyCollection&lt;T&gt; or KeyedCollection&lt;K,V&gt;</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#RenderControl(System.Web.UI.HtmlTextWriter)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="DoNotCatchGeneralExceptionTypes" Category="Microsoft.Design" CheckId="CA1031" Status="Active" Created="2008-09-14 22:34:59Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="CriticalError" Path="C:\DEV\SPSProfessional2\SPSProfessional.SharePoint.Framework\SPSProfessional.SharePoint.Framework\Controls" File="SPSXsltControl.cs" Line="134">Modify 'SPSXsltControl.RenderControl(HtmlTextWriter)' to catch a more specific exception than 'Exception' or rethrow the exception.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#RenderControlInternal(System.Web.UI.HtmlTextWriter)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="DoNotCatchGeneralExceptionTypes" Category="Microsoft.Design" CheckId="CA1031" Status="Active" Created="2008-09-14 22:34:59Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="CriticalError" Path="C:\DEV\SPSProfessional2\SPSProfessional.SharePoint.Framework\SPSProfessional.SharePoint.Framework\Controls" File="SPSXsltControl.cs" Line="161">Modify 'SPSXsltControl.RenderControlInternal(HtmlTextWriter)' to catch a more specific exception than 'Exception' or rethrow the exception.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#Transform()" Kind="Method" Static="False" Accessibility="Assembly" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="DoNotCatchGeneralExceptionTypes" Category="Microsoft.Design" CheckId="CA1031" Status="Active" Created="2008-09-14 22:34:59Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="CriticalError" Path="C:\DEV\SPSProfessional2\SPSProfessional.SharePoint.Framework\SPSProfessional.SharePoint.Framework\Controls" File="SPSXsltControl.cs" Line="233">Modify 'SPSXsltControl.Transform()' to catch a more specific exception than 'Exception' or rethrow the exception.</Issue>
+            </Message>
+            <Message Id="System.IO.StringWriter.#ctor" TypeName="SpecifyIFormatProvider" Category="Microsoft.Globalization" CheckId="CA1305" Status="Active" Created="2008-09-14 22:34:59Z" FixCategory="DependsOnFix">
+             <Issue Certainty="95" Level="Error" Path="C:\DEV\SPSProfessional2\SPSProfessional.SharePoint.Framework\SPSProfessional.SharePoint.Framework\Controls" File="SPSXsltControl.cs" Line="201">Because the behavior of 'StringWriter.StringWriter()' could vary based on the current user's locale settings, replace this call in 'SPSXsltControl.Transform()' with a call to 'StringWriter.StringWriter(IFormatProvider)'. If the result of 'StringWriter.StringWriter(IFormatProvider)' will be displayed to the user, specify 'CultureInfo.CurrentCulture' as the 'IFormatProvider' parameter. Otherwise, if the result will be stored and accessed by software, such as when it is persisted to disk or to a database, specify 'CultureInfo.InvariantCulture'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+       </Types>
+      </Namespace>
+      <Namespace Name="SPSProfessional.SharePoint.Framework.Error">
+       <Types>
+        <Type Name="ISPSErrorControl" Kind="Interface" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#OnError" Kind="Event" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="DeclareEventHandlersCorrectly" Category="Microsoft.Design" CheckId="CA1009" Status="Active" Created="2008-09-14 22:34:59Z" FixCategory="Breaking">
+             <Issue Name="Second" Certainty="95" Level="Error">Declare the second parameter of 'SPSControlOnError' as an EventArgs, or an instance of a type that extends EventArgs, named 'e'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="SPSConfigError" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#__Color" Kind="Field" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="DoNotDeclareVisibleInstanceFields" Category="Microsoft.Design" CheckId="CA1051" Status="Active" Created="2008-09-14 22:34:59Z" FixCategory="Breaking">
+             <Issue Certainty="90" Level="Error">Because field 'SPSConfigError.__Color' is visible outside of its declaring type, change its accessibility to private and add a property, with the same accessibility as the field has currently, to provide access to it.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#__Match" Kind="Field" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="DoNotDeclareVisibleInstanceFields" Category="Microsoft.Design" CheckId="CA1051" Status="Active" Created="2008-09-14 22:34:59Z" FixCategory="Breaking">
+             <Issue Certainty="90" Level="Error">Because field 'SPSConfigError.__Match' is visible outside of its declaring type, change its accessibility to private and add a property, with the same accessibility as the field has currently, to provide access to it.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#__Message" Kind="Field" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="DoNotDeclareVisibleInstanceFields" Category="Microsoft.Design" CheckId="CA1051" Status="Active" Created="2008-09-14 22:34:59Z" FixCategory="Breaking">
+             <Issue Certainty="90" Level="Error">Because field 'SPSConfigError.__Message' is visible outside of its declaring type, change its accessibility to private and add a property, with the same accessibility as the field has currently, to provide access to it.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="SPSConfigErrorCollection" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Messages>
+          <Message TypeName="CollectionsShouldImplementGenericInterface" Category="Microsoft.Design" CheckId="CA1010" Status="Active" Created="2008-09-14 22:34:59Z" FixCategory="NonBreaking">
+           <Issue Certainty="90" Level="Error">'SPSConfigErrorCollection' appears to be a non-generic, strongly typed collection. Add an implementation to the instance of IList&lt;T&gt; where T is the underlying element type of 'SPSConfigErrorCollection'.</Issue>
+          </Message>
+          <Message TypeName="ICollectionImplementationsHaveStronglyTypedMembers" Category="Microsoft.Design" CheckId="CA1035" Status="Active" Created="2008-09-14 22:34:59Z" FixCategory="Breaking">
+           <Issue Certainty="90" Level="Error">'SPSConfigErrorCollection' should provide a strongly typed implementation of ICollection.CopyTo.</Issue>
+          </Message>
+          <Message TypeName="ListsAreStronglyTyped" Category="Microsoft.Design" CheckId="CA1039" Status="Active" Created="2008-09-14 22:34:59Z" FixCategory="Breaking">
+           <Issue Certainty="90" Level="Error">'SPSConfigErrorCollection' should provide a strongly typed implementation of IList.Contains.</Issue>
+           <Issue Certainty="90" Level="Error">'SPSConfigErrorCollection' should provide a strongly typed implementation of IList.IndexOf.</Issue>
+          </Message>
+         </Messages>
+        </Type>
+        <Type Name="SPSConfigErrors" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#__ErrorCollection" Kind="Field" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="DoNotDeclareVisibleInstanceFields" Category="Microsoft.Design" CheckId="CA1051" Status="Active" Created="2008-09-14 22:34:59Z" FixCategory="Breaking">
+             <Issue Certainty="90" Level="Error">Because field 'SPSConfigErrors.__ErrorCollection' is visible outside of its declaring type, change its accessibility to private and add a property, with the same accessibility as the field has currently, to provide access to it.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+       </Types>
+      </Namespace>
+      <Namespace Name="SPSProfessional.SharePoint.Framework.Hierarchy">
+       <Types>
+        <Type Name="ISPSHierarchyNode" Kind="Interface" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#ImageUrl" Kind="Property" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="UriPropertiesShouldNotBeStrings" Category="Microsoft.Design" CheckId="CA1056" Status="Active" Created="2008-09-14 22:34:59Z" FixCategory="Breaking">
+             <Issue Certainty="75" Level="Error">Change the type of property 'ISPSHierarchyNode.ImageUrl' from string to System.Uri.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#NavigateUrl" Kind="Property" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="UriPropertiesShouldNotBeStrings" Category="Microsoft.Design" CheckId="CA1056" Status="Active" Created="2008-09-14 22:34:59Z" FixCategory="Breaking">
+             <Issue Certainty="75" Level="Error">Change the type of property 'ISPSHierarchyNode.NavigateUrl' from string to System.Uri.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#UrlSegment" Kind="Property" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="UriPropertiesShouldNotBeStrings" Category="Microsoft.Design" CheckId="CA1056" Status="Active" Created="2008-09-14 22:34:59Z" FixCategory="Breaking">
+             <Issue Certainty="75" Level="Error">Change the type of property 'ISPSHierarchyNode.UrlSegment' from string to System.Uri.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="ISPSTreeNode`1" Kind="Interface" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#Children" Kind="Property" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="DoNotExposeGenericLists" Category="Microsoft.Design" CheckId="CA1002" Status="Active" Created="2008-09-14 22:34:59Z" FixCategory="Breaking">
+             <Issue Certainty="95" Level="Error">Change 'List&lt;ISPSTreeNode&lt;T&gt;&gt;' in 'ISPSTreeNode&lt;T&gt;.Children' to use Collection&lt;T&gt;, ReadOnlyCollection&lt;T&gt; or KeyedCollection&lt;K,V&gt;</Issue>
+            </Message>
+            <Message TypeName="DoNotNestGenericTypesInMemberSignatures" Category="Microsoft.Design" CheckId="CA1006" Status="Active" Created="2008-09-14 22:34:59Z" FixCategory="Breaking">
+             <Issue Certainty="95" Level="CriticalError">Consider a design where 'ISPSTreeNode&lt;T&gt;.Children' doesn't nest generic type 'List&lt;ISPSTreeNode&lt;T&gt;&gt;'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="SPSHierarchyDataSource" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#GetAll()" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="UsePropertiesWhereAppropriate" Category="Microsoft.Design" CheckId="CA1024" Status="Active" Created="2008-09-14 22:34:59Z" FixCategory="Breaking">
+             <Issue Certainty="50" Level="Warning" Path="C:\DEV\SPSProfessional2\SPSProfessional.SharePoint.Framework\SPSProfessional.SharePoint.Framework\Hierarchy" File="SPSHierarchyDataSource.cs" Line="116">Change 'SPSHierarchyDataSource.GetAll()' to a property if appropriate.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="SPSHierarchyFactory" Kind="Class" Accessibility="Assembly" ExternallyVisible="False">
+         <Members>
+          <Member Name="#MakeListTree(Microsoft.SharePoint.SPWeb)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="AvoidUncalledPrivateCode" Category="Microsoft.Performance" CheckId="CA1811" Status="Active" Created="2008-09-14 22:34:59Z" FixCategory="NonBreaking">
+             <Issue Certainty="75" Level="Warning" Path="C:\DEV\SPSProfessional2\SPSProfessional.SharePoint.Framework\SPSProfessional.SharePoint.Framework\Hierarchy" File="SPSHierarchyFactory.cs" Line="66">'SPSHierarchyFactory.MakeListTree(SPWeb)' appears to have no upstream public or protected callers.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="SPSHierarchyFilter" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#EnsureDispose(Microsoft.SharePoint.SPWeb)" Kind="Method" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="AvoidUncalledPrivateCode" Category="Microsoft.Performance" CheckId="CA1811" Status="Active" Created="2008-09-14 22:34:59Z" FixCategory="NonBreaking">
+             <Issue Certainty="75" Level="Warning" Path="C:\DEV\SPSProfessional2\SPSProfessional.SharePoint.Framework\SPSProfessional.SharePoint.Framework\Hierarchy" File="SPSHierarchyFilter.cs" Line="278">'SPSHierarchyFilter.EnsureDispose(SPWeb)' appears to have no upstream public or protected callers.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#OnFilter" Kind="Event" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="DeclareEventHandlersCorrectly" Category="Microsoft.Design" CheckId="CA1009" Status="Active" Created="2008-09-14 22:34:59Z" FixCategory="Breaking">
+             <Issue Name="Return" Certainty="95" Level="Error">Change 'HierarchyFilterDelegate' to return void.</Issue>
+             <Issue Name="Second" Certainty="95" Level="Error">Declare the second parameter of 'HierarchyFilterDelegate' as an EventArgs, or an instance of a type that extends EventArgs, named 'e'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="SPSHierarchyNode" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#.ctor(SPSProfessional.SharePoint.Framework.Hierarchy.SPSHierarchyNodeType,System.Guid,System.Guid,System.Guid,System.Guid,System.String,System.String,System.String,System.String,System.String)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message Id="6#" TypeName="UriParametersShouldNotBeStrings" Category="Microsoft.Design" CheckId="CA1054" Status="Active" Created="2008-09-14 22:34:59Z" FixCategory="Breaking">
+             <Issue Certainty="60" Level="Error" Path="C:\DEV\SPSProfessional2\SPSProfessional.SharePoint.Framework\SPSProfessional.SharePoint.Framework\Hierarchy" File="SPSHierarchyNode.cs" Line="66">Change the type of parameter 'urlSegment' of method 'SPSHierarchyNode.SPSHierarchyNode(SPSHierarchyNodeType, Guid, Guid, Guid, Guid, string, string, string, string, string)' from string to System.Uri, or provide an overload of 'SPSHierarchyNode.SPSHierarchyNode(SPSHierarchyNodeType, Guid, Guid, Guid, Guid, string, string, string, string, string)', that allows 'urlSegment' to be passed as a System.Uri object.</Issue>
+            </Message>
+            <Message Id="7#" TypeName="UriParametersShouldNotBeStrings" Category="Microsoft.Design" CheckId="CA1054" Status="Active" Created="2008-09-14 22:34:59Z" FixCategory="Breaking">
+             <Issue Certainty="60" Level="Error" Path="C:\DEV\SPSProfessional2\SPSProfessional.SharePoint.Framework\SPSProfessional.SharePoint.Framework\Hierarchy" File="SPSHierarchyNode.cs" Line="66">Change the type of parameter 'navigateUrl' of method 'SPSHierarchyNode.SPSHierarchyNode(SPSHierarchyNodeType, Guid, Guid, Guid, Guid, string, string, string, string, string)' from string to System.Uri, or provide an overload of 'SPSHierarchyNode.SPSHierarchyNode(SPSHierarchyNodeType, Guid, Guid, Guid, Guid, string, string, string, string, string)', that allows 'navigateUrl' to be passed as a System.Uri object.</Issue>
+            </Message>
+            <Message Id="9#" TypeName="UriParametersShouldNotBeStrings" Category="Microsoft.Design" CheckId="CA1054" Status="Active" Created="2008-09-14 22:34:59Z" FixCategory="Breaking">
+             <Issue Certainty="60" Level="Error" Path="C:\DEV\SPSProfessional2\SPSProfessional.SharePoint.Framework\SPSProfessional.SharePoint.Framework\Hierarchy" File="SPSHierarchyNode.cs" Line="66">Change the type of parameter 'imageUrl' of method 'SPSHierarchyNode.SPSHierarchyNode(SPSHierarchyNodeType, Guid, Guid, Guid, Guid, string, string, string, string, string)' from string to System.Uri, or provide an overload of 'SPSHierarchyNode.SPSHierarchyNode(SPSHierarchyNodeType, Guid, Guid, Guid, Guid, string, string, string, string, string)', that allows 'imageUrl' to be passed as a System.Uri object.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#.ctor(SPSProfessional.SharePoint.Framework.Hierarchy.SPSHierarchyNodeType,System.Guid,System.Guid,System.Guid,System.String,System.String,System.String,System.String,System.String)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message Id="5#" TypeName="UriParametersShouldNotBeStrings" Category="Microsoft.Design" CheckId="CA1054" Status="Active" Created="2008-09-14 22:34:59Z" FixCategory="Breaking">
+             <Issue Certainty="60" Level="Error" Path="C:\DEV\SPSProfessional2\SPSProfessional.SharePoint.Framework\SPSProfessional.SharePoint.Framework\Hierarchy" File="SPSHierarchyNode.cs" Line="50">Change the type of parameter 'urlSegment' of method 'SPSHierarchyNode.SPSHierarchyNode(SPSHierarchyNodeType, Guid, Guid, Guid, string, string, string, string, string)' from string to System.Uri, or provide an overload of 'SPSHierarchyNode.SPSHierarchyNode(SPSHierarchyNodeType, Guid, Guid, Guid, string, string, string, string, string)', that allows 'urlSegment' to be passed as a System.Uri object.</Issue>
+            </Message>
+            <Message Id="6#" TypeName="UriParametersShouldNotBeStrings" Category="Microsoft.Design" CheckId="CA1054" Status="Active" Created="2008-09-14 22:34:59Z" FixCategory="Breaking">
+             <Issue Certainty="60" Level="Error" Path="C:\DEV\SPSProfessional2\SPSProfessional.SharePoint.Framework\SPSProfessional.SharePoint.Framework\Hierarchy" File="SPSHierarchyNode.cs" Line="50">Change the type of parameter 'navigateUrl' of method 'SPSHierarchyNode.SPSHierarchyNode(SPSHierarchyNodeType, Guid, Guid, Guid, string, string, string, string, string)' from string to System.Uri, or provide an overload of 'SPSHierarchyNode.SPSHierarchyNode(SPSHierarchyNodeType, Guid, Guid, Guid, string, string, string, string, string)', that allows 'navigateUrl' to be passed as a System.Uri object.</Issue>
+            </Message>
+            <Message Id="8#" TypeName="UriParametersShouldNotBeStrings" Category="Microsoft.Design" CheckId="CA1054" Status="Active" Created="2008-09-14 22:34:59Z" FixCategory="Breaking">
+             <Issue Certainty="60" Level="Error" Path="C:\DEV\SPSProfessional2\SPSProfessional.SharePoint.Framework\SPSProfessional.SharePoint.Framework\Hierarchy" File="SPSHierarchyNode.cs" Line="50">Change the type of parameter 'imageUrl' of method 'SPSHierarchyNode.SPSHierarchyNode(SPSHierarchyNodeType, Guid, Guid, Guid, string, string, string, string, string)' from string to System.Uri, or provide an overload of 'SPSHierarchyNode.SPSHierarchyNode(SPSHierarchyNodeType, Guid, Guid, Guid, string, string, string, string, string)', that allows 'imageUrl' to be passed as a System.Uri object.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#.ctor(SPSProfessional.SharePoint.Framework.Hierarchy.SPSHierarchyNodeType,System.Guid,System.Guid,System.String,System.String,System.String,System.String,System.String)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message Id="4#" TypeName="UriParametersShouldNotBeStrings" Category="Microsoft.Design" CheckId="CA1054" Status="Active" Created="2008-09-14 22:34:59Z" FixCategory="Breaking">
+             <Issue Certainty="60" Level="Error" Path="C:\DEV\SPSProfessional2\SPSProfessional.SharePoint.Framework\SPSProfessional.SharePoint.Framework\Hierarchy" File="SPSHierarchyNode.cs" Line="28">Change the type of parameter 'urlSegment' of method 'SPSHierarchyNode.SPSHierarchyNode(SPSHierarchyNodeType, Guid, Guid, string, string, string, string, string)' from string to System.Uri, or provide an overload of 'SPSHierarchyNode.SPSHierarchyNode(SPSHierarchyNodeType, Guid, Guid, string, string, string, string, string)', that allows 'urlSegment' to be passed as a System.Uri object.</Issue>
+            </Message>
+            <Message Id="5#" TypeName="UriParametersShouldNotBeStrings" Category="Microsoft.Design" CheckId="CA1054" Status="Active" Created="2008-09-14 22:34:59Z" FixCategory="Breaking">
+             <Issue Certainty="60" Level="Error" Path="C:\DEV\SPSProfessional2\SPSProfessional.SharePoint.Framework\SPSProfessional.SharePoint.Framework\Hierarchy" File="SPSHierarchyNode.cs" Line="28">Change the type of parameter 'navigateUrl' of method 'SPSHierarchyNode.SPSHierarchyNode(SPSHierarchyNodeType, Guid, Guid, string, string, string, string, string)' from string to System.Uri, or provide an overload of 'SPSHierarchyNode.SPSHierarchyNode(SPSHierarchyNodeType, Guid, Guid, string, string, string, string, string)', that allows 'navigateUrl' to be passed as a System.Uri object.</Issue>
+            </Message>
+            <Message Id="7#" TypeName="UriParametersShouldNotBeStrings" Category="Microsoft.Design" CheckId="CA1054" Status="Active" Created="2008-09-14 22:34:59Z" FixCategory="Breaking">
+             <Issue Certainty="60" Level="Error" Path="C:\DEV\SPSProfessional2\SPSProfessional.SharePoint.Framework\SPSProfessional.SharePoint.Framework\Hierarchy" File="SPSHierarchyNode.cs" Line="28">Change the type of parameter 'imageUrl' of method 'SPSHierarchyNode.SPSHierarchyNode(SPSHierarchyNodeType, Guid, Guid, string, string, string, string, string)' from string to System.Uri, or provide an overload of 'SPSHierarchyNode.SPSHierarchyNode(SPSHierarchyNodeType, Guid, Guid, string, string, string, string, string)', that allows 'imageUrl' to be passed as a System.Uri object.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="SPSTreeNode`1" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#Children" Kind="Property" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="DoNotExposeGenericLists" Category="Microsoft.Design" CheckId="CA1002" Status="Active" Created="2008-09-14 22:34:59Z" FixCategory="Breaking">
+             <Issue Certainty="95" Level="Error" Path="C:\DEV\SPSProfessional2\SPSProfessional.SharePoint.Framework\SPSProfessional.SharePoint.Framework\Hierarchy" File="SPSTreeNode.cs" Line="61">Change 'List&lt;ISPSTreeNode&lt;T&gt;&gt;' in 'SPSTreeNode&lt;T&gt;.Children' to use Collection&lt;T&gt;, ReadOnlyCollection&lt;T&gt; or KeyedCollection&lt;K,V&gt;</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#Display(System.Int32)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message Id="indentation+1" TypeName="OperationsShouldNotOverflow" Category="Microsoft.Usage" CheckId="CA2233" Status="Active" Created="2008-09-14 22:34:59Z" FixCategory="NonBreaking">
+             <Issue Certainty="75" Level="CriticalWarning" Path="C:\DEV\SPSProfessional2\SPSProfessional.SharePoint.Framework\SPSProfessional.SharePoint.Framework\Hierarchy" File="SPSTreeNode.cs" Line="96">Correct the potential overflow in the operation 'indentation+1' in 'SPSTreeNode&lt;T&gt;.Display(int)'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+       </Types>
+      </Namespace>
+      <Namespace Name="SPSProfessional.SharePoint.Framework.Tools">
+       <Types>
+        <Type Name="CryptoString" Kind="Class" Accessibility="Assembly" ExternallyVisible="False">
+         <Members>
+          <Member Name="#Decrypt(System.String)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="AvoidUncalledPrivateCode" Category="Microsoft.Performance" CheckId="CA1811" Status="Active" Created="2008-09-14 22:34:59Z" FixCategory="NonBreaking">
+             <Issue Certainty="75" Level="Warning" Path="C:\DEV\SPSProfessional2\SPSProfessional.SharePoint.Framework\SPSProfessional.SharePoint.Framework\Tools" File="SPSControlar.cs" Line="904">'CryptoString.Decrypt(string)' appears to have no upstream public or protected callers.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#Encrypt(System.String)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="AvoidUncalledPrivateCode" Category="Microsoft.Performance" CheckId="CA1811" Status="Active" Created="2008-09-14 22:34:59Z" FixCategory="NonBreaking">
+             <Issue Certainty="75" Level="Warning" Path="C:\DEV\SPSProfessional2\SPSProfessional.SharePoint.Framework\SPSProfessional.SharePoint.Framework\Tools" File="SPSControlar.cs" Line="889">'CryptoString.Encrypt(string)' appears to have no upstream public or protected callers.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="DatosFile" Kind="Class" Accessibility="Assembly" ExternallyVisible="False">
+         <Members>
+          <Member Name="#ClientName" Kind="Property" Static="False" Accessibility="Public" ExternallyVisible="False">
+           <Accessors>
+            <Accessor Name="#get_ClientName()" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="False">
+             <Messages>
+              <Message TypeName="AvoidUncalledPrivateCode" Category="Microsoft.Performance" CheckId="CA1811" Status="Active" Created="2008-09-14 22:34:59Z" FixCategory="NonBreaking">
+               <Issue Certainty="75" Level="Warning" Path="C:\DEV\SPSProfessional2\SPSProfessional.SharePoint.Framework\SPSProfessional.SharePoint.Framework\Tools" File="SPSControlar.cs" Line="651">'DatosFile.ClientName.get()' appears to have no upstream public or protected callers.</Issue>
+              </Message>
+             </Messages>
+            </Accessor>
+           </Accessors>
+          </Member>
+          <Member Name="#DaysToExpiration" Kind="Property" Static="False" Accessibility="Public" ExternallyVisible="False">
+           <Accessors>
+            <Accessor Name="#get_DaysToExpiration()" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="False">
+             <Messages>
+              <Message TypeName="AvoidUncalledPrivateCode" Category="Microsoft.Performance" CheckId="CA1811" Status="Active" Created="2008-09-14 22:34:59Z" FixCategory="NonBreaking">
+               <Issue Certainty="75" Level="Warning" Path="C:\DEV\SPSProfessional2\SPSProfessional.SharePoint.Framework\SPSProfessional.SharePoint.Framework\Tools" File="SPSControlar.cs" Line="633">'DatosFile.DaysToExpiration.get()' appears to have no upstream public or protected callers.</Issue>
+              </Message>
+             </Messages>
+            </Accessor>
+           </Accessors>
+          </Member>
+          <Member Name="#LicenseDate" Kind="Property" Static="False" Accessibility="Public" ExternallyVisible="False">
+           <Accessors>
+            <Accessor Name="#get_LicenseDate()" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="False">
+             <Messages>
+              <Message TypeName="AvoidUncalledPrivateCode" Category="Microsoft.Performance" CheckId="CA1811" Status="Active" Created="2008-09-14 22:34:59Z" FixCategory="NonBreaking">
+               <Issue Certainty="75" Level="Warning" Path="C:\DEV\SPSProfessional2\SPSProfessional.SharePoint.Framework\SPSProfessional.SharePoint.Framework\Tools" File="SPSControlar.cs" Line="615">'DatosFile.LicenseDate.get()' appears to have no upstream public or protected callers.</Issue>
+              </Message>
+             </Messages>
+            </Accessor>
+           </Accessors>
+          </Member>
+          <Member Name="#LicenseEngineVersion" Kind="Property" Static="False" Accessibility="Public" ExternallyVisible="False">
+           <Accessors>
+            <Accessor Name="#get_LicenseEngineVersion()" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="False">
+             <Messages>
+              <Message TypeName="AvoidUncalledPrivateCode" Category="Microsoft.Performance" CheckId="CA1811" Status="Active" Created="2008-09-14 22:34:59Z" FixCategory="NonBreaking">
+               <Issue Certainty="75" Level="Warning" Path="C:\DEV\SPSProfessional2\SPSProfessional.SharePoint.Framework\SPSProfessional.SharePoint.Framework\Tools" File="SPSControlar.cs" Line="609">'DatosFile.LicenseEngineVersion.get()' appears to have no upstream public or protected callers.</Issue>
+              </Message>
+             </Messages>
+            </Accessor>
+           </Accessors>
+          </Member>
+          <Member Name="#OtherInformation" Kind="Property" Static="False" Accessibility="Public" ExternallyVisible="False">
+           <Accessors>
+            <Accessor Name="#get_OtherInformation()" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="False">
+             <Messages>
+              <Message TypeName="AvoidUncalledPrivateCode" Category="Microsoft.Performance" CheckId="CA1811" Status="Active" Created="2008-09-14 22:34:59Z" FixCategory="NonBreaking">
+               <Issue Certainty="75" Level="Warning" Path="C:\DEV\SPSProfessional2\SPSProfessional.SharePoint.Framework\SPSProfessional.SharePoint.Framework\Tools" File="SPSControlar.cs" Line="663">'DatosFile.OtherInformation.get()' appears to have no upstream public or protected callers.</Issue>
+              </Message>
+             </Messages>
+            </Accessor>
+           </Accessors>
+          </Member>
+          <Member Name="#ProductName" Kind="Property" Static="False" Accessibility="Public" ExternallyVisible="False">
+           <Accessors>
+            <Accessor Name="#get_ProductName()" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="False">
+             <Messages>
+              <Message TypeName="AvoidUncalledPrivateCode" Category="Microsoft.Performance" CheckId="CA1811" Status="Active" Created="2008-09-14 22:34:59Z" FixCategory="NonBreaking">
+               <Issue Certainty="75" Level="Warning" Path="C:\DEV\SPSProfessional2\SPSProfessional.SharePoint.Framework\SPSProfessional.SharePoint.Framework\Tools" File="SPSControlar.cs" Line="687">'DatosFile.ProductName.get()' appears to have no upstream public or protected callers.</Issue>
+              </Message>
+             </Messages>
+            </Accessor>
+           </Accessors>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="SPSControlar" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#Aceptado()" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="DoNotCatchGeneralExceptionTypes" Category="Microsoft.Design" CheckId="CA1031" Status="Active" Created="2008-09-14 22:34:59Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="CriticalError" Path="C:\DEV\SPSProfessional2\SPSProfessional.SharePoint.Framework\SPSProfessional.SharePoint.Framework\Tools" File="SPSControlar.cs" Line="118">Modify 'SPSControlar.Aceptado()' to catch a more specific exception than 'Exception' or rethrow the exception.</Issue>
+            </Message>
+            <Message Id="System.String.ToUpper" TypeName="SpecifyCultureInfo" Category="Microsoft.Globalization" CheckId="CA1304" Status="Active" Created="2008-09-14 22:34:59Z" FixCategory="DependsOnFix">
+             <Issue Certainty="95" Level="Error" Path="C:\DEV\SPSProfessional2\SPSProfessional.SharePoint.Framework\SPSProfessional.SharePoint.Framework\Tools" File="SPSControlar.cs" Line="100">Because the behavior of 'string.ToUpper()' could vary based on the current user's locale settings, replace this call in 'SPSControlar.Aceptado()' with a call to 'string.ToUpper(CultureInfo)'. If the result of 'string.ToUpper(CultureInfo)' will be displayed to the user, specify 'CultureInfo.CurrentCulture' as the 'CultureInfo' parameter. Otherwise, if the result will be stored and accessed by software, such as when it is persisted to disk or to a database, specify 'CultureInfo.InvariantCulture'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#ControlNombre(SPSProfessional.SharePoint.Framework.Tools.DatosFile)" Kind="Method" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="DoNotCatchGeneralExceptionTypes" Category="Microsoft.Design" CheckId="CA1031" Status="Active" Created="2008-09-14 22:34:59Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="CriticalError" Path="C:\DEV\SPSProfessional2\SPSProfessional.SharePoint.Framework\SPSProfessional.SharePoint.Framework\Tools" File="SPSControlar.cs" Line="321">Modify 'SPSControlar.ControlNombre(DatosFile)' to catch a more specific exception than 'Exception' or rethrow the exception.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#DireccionesI()" Kind="Method" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="DoNotCatchGeneralExceptionTypes" Category="Microsoft.Design" CheckId="CA1031" Status="Active" Created="2008-09-14 22:34:59Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="CriticalError" Path="C:\DEV\SPSProfessional2\SPSProfessional.SharePoint.Framework\SPSProfessional.SharePoint.Framework\Tools" File="SPSControlar.cs" Line="452">Modify 'SPSControlar.DireccionesI()' to catch a more specific exception than 'Exception' or rethrow the exception.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#DireccionesM()" Kind="Method" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="DoNotCatchGeneralExceptionTypes" Category="Microsoft.Design" CheckId="CA1031" Status="Active" Created="2008-09-14 22:34:59Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="CriticalError" Path="C:\DEV\SPSProfessional2\SPSProfessional.SharePoint.Framework\SPSProfessional.SharePoint.Framework\Tools" File="SPSControlar.cs" Line="424">Modify 'SPSControlar.DireccionesM()' to catch a more specific exception than 'Exception' or rethrow the exception.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#FoundInList(System.Collections.Generic.IEnumerable`1&lt;System.String&gt;,System.String)" Kind="Method" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="DoNotCatchGeneralExceptionTypes" Category="Microsoft.Design" CheckId="CA1031" Status="Active" Created="2008-09-14 22:34:59Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="CriticalError" Path="C:\DEV\SPSProfessional2\SPSProfessional.SharePoint.Framework\SPSProfessional.SharePoint.Framework\Tools" File="SPSControlar.cs" Line="481">Modify 'SPSControlar.FoundInList(IEnumerable&lt;string&gt;, string)' to catch a more specific exception than 'Exception' or rethrow the exception.</Issue>
+            </Message>
+            <Message Id="System.String.ToLower" TypeName="SpecifyCultureInfo" Category="Microsoft.Globalization" CheckId="CA1304" Status="Active" Created="2008-09-14 22:34:59Z" FixCategory="DependsOnFix">
+             <Issue Certainty="95" Level="Error" Path="C:\DEV\SPSProfessional2\SPSProfessional.SharePoint.Framework\SPSProfessional.SharePoint.Framework\Tools" File="SPSControlar.cs" Line="474">Because the behavior of 'string.ToLower()' could vary based on the current user's locale settings, replace this call in 'SPSControlar.FoundInList(IEnumerable&lt;string&gt;, string)' with a call to 'string.ToLower(CultureInfo)'. If the result of 'string.ToLower(CultureInfo)' will be displayed to the user, specify 'CultureInfo.CurrentCulture' as the 'CultureInfo' parameter. Otherwise, if the result will be stored and accessed by software, such as when it is persisted to disk or to a database, specify 'CultureInfo.InvariantCulture'.</Issue>
+             <Issue Certainty="95" Level="Error" Path="C:\DEV\SPSProfessional2\SPSProfessional.SharePoint.Framework\SPSProfessional.SharePoint.Framework\Tools" File="SPSControlar.cs" Line="474">Because the behavior of 'string.ToLower()' could vary based on the current user's locale settings, replace this call in 'SPSControlar.FoundInList(IEnumerable&lt;string&gt;, string)' with a call to 'string.ToLower(CultureInfo)'. If the result of 'string.ToLower(CultureInfo)' will be displayed to the user, specify 'CultureInfo.CurrentCulture' as the 'CultureInfo' parameter. Otherwise, if the result will be stored and accessed by software, such as when it is persisted to disk or to a database, specify 'CultureInfo.InvariantCulture'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#IsInsideTimeAbsolute(System.String)" Kind="Method" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="DoNotCatchGeneralExceptionTypes" Category="Microsoft.Design" CheckId="CA1031" Status="Active" Created="2008-09-14 22:34:59Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="CriticalError" Path="C:\DEV\SPSProfessional2\SPSProfessional.SharePoint.Framework\SPSProfessional.SharePoint.Framework\Tools" File="SPSControlar.cs" Line="398">Modify 'SPSControlar.IsInsideTimeAbsolute(string)' to catch a more specific exception than 'Exception' or rethrow the exception.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#IsInsideTimeRelative(SPSProfessional.SharePoint.Framework.Tools.DatosFile)" Kind="Method" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="DoNotCatchGeneralExceptionTypes" Category="Microsoft.Design" CheckId="CA1031" Status="Active" Created="2008-09-14 22:34:59Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="CriticalError" Path="C:\DEV\SPSProfessional2\SPSProfessional.SharePoint.Framework\SPSProfessional.SharePoint.Framework\Tools" File="SPSControlar.cs" Line="370">Modify 'SPSControlar.IsInsideTimeRelative(DatosFile)' to catch a more specific exception than 'Exception' or rethrow the exception.</Issue>
+            </Message>
+            <Message Id="System.DateTime.Parse(System.String)" TypeName="SpecifyIFormatProvider" Category="Microsoft.Globalization" CheckId="CA1305" Status="Active" Created="2008-09-14 22:34:59Z" FixCategory="DependsOnFix">
+             <Issue Certainty="95" Level="Error" Path="C:\DEV\SPSProfessional2\SPSProfessional.SharePoint.Framework\SPSProfessional.SharePoint.Framework\Tools" File="SPSControlar.cs" Line="360">Because the behavior of 'DateTime.Parse(string)' could vary based on the current user's locale settings, replace this call in 'SPSControlar.IsInsideTimeRelative(DatosFile)' with a call to 'DateTime.Parse(string, IFormatProvider)'. If the result of 'DateTime.Parse(string, IFormatProvider)' will be displayed to the user, specify 'CultureInfo.CurrentCulture' as the 'IFormatProvider' parameter. Otherwise, if the result will be stored and accessed by software, such as when it is persisted to disk or to a database, specify 'CultureInfo.InvariantCulture'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#LeerFile(System.IO.TextReader,SPSProfessional.SharePoint.Framework.Tools.DatosFile&amp;)" Kind="Method" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="DoNotCatchGeneralExceptionTypes" Category="Microsoft.Design" CheckId="CA1031" Status="Active" Created="2008-09-14 22:34:59Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="CriticalError" Path="C:\DEV\SPSProfessional2\SPSProfessional.SharePoint.Framework\SPSProfessional.SharePoint.Framework\Tools" File="SPSControlar.cs" Line="283">Modify 'SPSControlar.LeerFile(TextReader, ref DatosFile)' to catch a more specific exception than 'Exception' or rethrow the exception.</Issue>
+            </Message>
+            <Message Id="System.String.ToLower" TypeName="SpecifyCultureInfo" Category="Microsoft.Globalization" CheckId="CA1304" Status="Active" Created="2008-09-14 22:34:59Z" FixCategory="DependsOnFix">
+             <Issue Certainty="95" Level="Error" Path="C:\DEV\SPSProfessional2\SPSProfessional.SharePoint.Framework\SPSProfessional.SharePoint.Framework\Tools" File="SPSControlar.cs" Line="249">Because the behavior of 'string.ToLower()' could vary based on the current user's locale settings, replace this call in 'SPSControlar.LeerFile(TextReader, ref DatosFile)' with a call to 'string.ToLower(CultureInfo)'. If the result of 'string.ToLower(CultureInfo)' will be displayed to the user, specify 'CultureInfo.CurrentCulture' as the 'CultureInfo' parameter. Otherwise, if the result will be stored and accessed by software, such as when it is persisted to disk or to a database, specify 'CultureInfo.InvariantCulture'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#ReadFromRegistry(System.String,System.String)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="DoNotCatchGeneralExceptionTypes" Category="Microsoft.Design" CheckId="CA1031" Status="Active" Created="2008-09-14 22:34:59Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="CriticalError" Path="C:\DEV\SPSProfessional2\SPSProfessional.SharePoint.Framework\SPSProfessional.SharePoint.Framework\Tools" File="SPSControlar.cs" Line="506">Modify 'SPSControlar.ReadFromRegistry(string, string)' to catch a more specific exception than 'Exception' or rethrow the exception.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#WriteToRegistry(System.String,System.String,System.String)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="DoNotCatchGeneralExceptionTypes" Category="Microsoft.Design" CheckId="CA1031" Status="Active" Created="2008-09-14 22:34:59Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="CriticalError" Path="C:\DEV\SPSProfessional2\SPSProfessional.SharePoint.Framework\SPSProfessional.SharePoint.Framework\Tools" File="SPSControlar.cs" Line="554">Modify 'SPSControlar.WriteToRegistry(string, string, string)' to catch a more specific exception than 'Exception' or rethrow the exception.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="SPSDebug" Kind="Class" Accessibility="Assembly" ExternallyVisible="False">
+         <Members>
+          <Member Name="#DumpException(System.String,System.Exception)" Kind="Method" Static="True" Accessibility="Assembly" ExternallyVisible="False">
+           <Messages>
+            <Message Id="System.String.Format(System.String,System.Object)" TypeName="SpecifyIFormatProvider" Category="Microsoft.Globalization" CheckId="CA1305" Status="Active" Created="2008-09-14 22:34:59Z" FixCategory="DependsOnFix">
+             <Issue Certainty="95" Level="Error" Path="C:\DEV\SPSProfessional2\SPSProfessional.SharePoint.Framework\SPSProfessional.SharePoint.Framework\Tools" File="SPSDebug.cs" Line="17">Because the behavior of 'string.Format(string, object)' could vary based on the current user's locale settings, replace this call in 'SPSDebug.DumpException(string, Exception)' with a call to 'string.Format(IFormatProvider, string, params object[])'. If the result of 'string.Format(IFormatProvider, string, params object[])' will be displayed to the user, specify 'CultureInfo.CurrentCulture' as the 'IFormatProvider' parameter. Otherwise, if the result will be stored and accessed by software, such as when it is persisted to disk or to a database, specify 'CultureInfo.InvariantCulture'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="SPSEditorPartsTools" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#CreateTextBoxAndBuilder(System.Web.UI.WebControls.TextBox)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="ConsiderPassingBaseTypesAsParameters" Category="Microsoft.Design" CheckId="CA1011" Status="Active" Created="2008-09-14 22:34:59Z" FixCategory="Breaking">
+             <Issue Certainty="50" Level="Error" Path="C:\DEV\SPSProfessional2\SPSProfessional.SharePoint.Framework\SPSProfessional.SharePoint.Framework\Tools" File="SPSEditorPartsTools.cs" Line="111">Consider changing the type of parameter 'editor' in 'SPSEditorPartsTools.CreateTextBoxAndBuilder(TextBox)' from 'TextBox' to its base type 'WebControl'. This method appears to only require base class members in its implementation. Suppress this violation if there is a compelling reason to require the more derived type in the method signature.</Issue>
+            </Message>
+            <Message Id="System.Web.UI.WebControls.Unit.#ctor(System.String)" TypeName="SpecifyCultureInfo" Category="Microsoft.Globalization" CheckId="CA1304" Status="Active" Created="2008-09-14 22:34:59Z" FixCategory="DependsOnFix">
+             <Issue Certainty="95" Level="Error" Path="C:\DEV\SPSProfessional2\SPSProfessional.SharePoint.Framework\SPSProfessional.SharePoint.Framework\Tools" File="SPSEditorPartsTools.cs" Line="114">Because the behavior of 'Unit.Unit(string)' could vary based on the current user's locale settings, replace this call in 'SPSEditorPartsTools.CreateTextBoxAndBuilder(TextBox)' with a call to 'Unit.Unit(string, CultureInfo)'. If the result of 'Unit.Unit(string, CultureInfo)' will be displayed to the user, specify 'CultureInfo.CurrentCulture' as the 'CultureInfo' parameter. Otherwise, if the result will be stored and accessed by software, such as when it is persisted to disk or to a database, specify 'CultureInfo.InvariantCulture'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#CreateTextBoxAndBuilderXml(System.Web.UI.WebControls.TextBox)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message Id="System.Web.UI.WebControls.Unit.#ctor(System.String)" TypeName="SpecifyCultureInfo" Category="Microsoft.Globalization" CheckId="CA1304" Status="Active" Created="2008-09-14 22:34:59Z" FixCategory="DependsOnFix">
+             <Issue Certainty="95" Level="Error" Path="C:\DEV\SPSProfessional2\SPSProfessional.SharePoint.Framework\SPSProfessional.SharePoint.Framework\Tools" File="SPSEditorPartsTools.cs" Line="130">Because the behavior of 'Unit.Unit(string)' could vary based on the current user's locale settings, replace this call in 'SPSEditorPartsTools.CreateTextBoxAndBuilderXml(TextBox)' with a call to 'Unit.Unit(string, CultureInfo)'. If the result of 'Unit.Unit(string, CultureInfo)' will be displayed to the user, specify 'CultureInfo.CurrentCulture' as the 'CultureInfo' parameter. Otherwise, if the result will be stored and accessed by software, such as when it is persisted to disk or to a database, specify 'CultureInfo.InvariantCulture'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#DecorateControls(System.Web.UI.ControlCollection)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message Id="System.Web.UI.WebControls.Unit.#ctor(System.String)" TypeName="SpecifyCultureInfo" Category="Microsoft.Globalization" CheckId="CA1304" Status="Active" Created="2008-09-14 22:34:59Z" FixCategory="DependsOnFix">
+             <Issue Certainty="95" Level="Error" Path="C:\DEV\SPSProfessional2\SPSProfessional.SharePoint.Framework\SPSProfessional.SharePoint.Framework\Tools" File="SPSEditorPartsTools.cs" Line="102">Because the behavior of 'Unit.Unit(string)' could vary based on the current user's locale settings, replace this call in 'SPSEditorPartsTools.DecorateControls(ControlCollection)' with a call to 'Unit.Unit(string, CultureInfo)'. If the result of 'Unit.Unit(string, CultureInfo)' will be displayed to the user, specify 'CultureInfo.CurrentCulture' as the 'CultureInfo' parameter. Otherwise, if the result will be stored and accessed by software, such as when it is persisted to disk or to a database, specify 'CultureInfo.InvariantCulture'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#FillWebParts(System.Web.HttpContext,System.Web.UI.WebControls.ListControl)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="DoNotCatchGeneralExceptionTypes" Category="Microsoft.Design" CheckId="CA1031" Status="Active" Created="2008-09-14 22:34:59Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="CriticalError" Path="C:\DEV\SPSProfessional2\SPSProfessional.SharePoint.Framework\SPSProfessional.SharePoint.Framework\Tools" File="SPSEditorPartsTools.cs" Line="332">Modify 'SPSEditorPartsTools.FillWebParts(HttpContext, ListControl)' to catch a more specific exception than 'Exception' or rethrow the exception.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#FillWebPartsForList(System.Web.HttpContext,System.String,System.Web.UI.WebControls.ListControl)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="DoNotCatchGeneralExceptionTypes" Category="Microsoft.Design" CheckId="CA1031" Status="Active" Created="2008-09-14 22:34:59Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="CriticalError" Path="C:\DEV\SPSProfessional2\SPSProfessional.SharePoint.Framework\SPSProfessional.SharePoint.Framework\Tools" File="SPSEditorPartsTools.cs" Line="378">Modify 'SPSEditorPartsTools.FillWebPartsForList(HttpContext, string, ListControl)' to catch a more specific exception than 'Exception' or rethrow the exception.</Issue>
+            </Message>
+            <Message Id="System.String.ToUpper" TypeName="SpecifyCultureInfo" Category="Microsoft.Globalization" CheckId="CA1304" Status="Active" Created="2008-09-14 22:34:59Z" FixCategory="DependsOnFix">
+             <Issue Certainty="95" Level="Error" Path="C:\DEV\SPSProfessional2\SPSProfessional.SharePoint.Framework\SPSProfessional.SharePoint.Framework\Tools" File="SPSEditorPartsTools.cs" Line="358">Because the behavior of 'string.ToUpper()' could vary based on the current user's locale settings, replace this call in 'SPSEditorPartsTools.FillWebPartsForList(HttpContext, string, ListControl)' with a call to 'string.ToUpper(CultureInfo)'. If the result of 'string.ToUpper(CultureInfo)' will be displayed to the user, specify 'CultureInfo.CurrentCulture' as the 'CultureInfo' parameter. Otherwise, if the result will be stored and accessed by software, such as when it is persisted to disk or to a database, specify 'CultureInfo.InvariantCulture'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#IndentXml(System.String)" Kind="Method" Static="True" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message Id="System.IO.StringWriter.#ctor(System.Text.StringBuilder)" TypeName="SpecifyIFormatProvider" Category="Microsoft.Globalization" CheckId="CA1305" Status="Active" Created="2008-09-14 22:34:59Z" FixCategory="DependsOnFix">
+             <Issue Certainty="95" Level="Error" Path="C:\DEV\SPSProfessional2\SPSProfessional.SharePoint.Framework\SPSProfessional.SharePoint.Framework\Tools" File="SPSEditorPartsTools.cs" Line="197">Because the behavior of 'StringWriter.StringWriter(StringBuilder)' could vary based on the current user's locale settings, replace this call in 'SPSEditorPartsTools.IndentXml(string)' with a call to 'StringWriter.StringWriter(StringBuilder, IFormatProvider)'. If the result of 'StringWriter.StringWriter(StringBuilder, IFormatProvider)' will be displayed to the user, specify 'CultureInfo.CurrentCulture' as the 'IFormatProvider' parameter. Otherwise, if the result will be stored and accessed by software, such as when it is persisted to disk or to a database, specify 'CultureInfo.InvariantCulture'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="SPSEvaluator" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#GetDateCalcEvaluator(System.Text.RegularExpressions.Match)" Kind="Method" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message Id="System.Int32.Parse(System.String)" TypeName="SpecifyIFormatProvider" Category="Microsoft.Globalization" CheckId="CA1305" Status="Active" Created="2008-09-14 22:34:59Z" FixCategory="DependsOnFix">
+             <Issue Certainty="95" Level="Error" Path="C:\DEV\SPSProfessional2\SPSProfessional.SharePoint.Framework\SPSProfessional.SharePoint.Framework\Tools" File="SPSEvaluator.cs" Line="331">Because the behavior of 'int.Parse(string)' could vary based on the current user's locale settings, replace this call in 'SPSEvaluator.GetDateCalcEvaluator(Match)' with a call to 'int.Parse(string, IFormatProvider)'. If the result of 'int.Parse(string, IFormatProvider)' will be displayed to the user, specify 'CultureInfo.CurrentCulture' as the 'IFormatProvider' parameter. Otherwise, if the result will be stored and accessed by software, such as when it is persisted to disk or to a database, specify 'CultureInfo.InvariantCulture'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#GetDateCalcFormatEvaluator(System.Text.RegularExpressions.Match)" Kind="Method" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message Id="System.DateTime.ToString(System.String)" TypeName="SpecifyIFormatProvider" Category="Microsoft.Globalization" CheckId="CA1305" Status="Active" Created="2008-09-14 22:34:59Z" FixCategory="DependsOnFix">
+             <Issue Certainty="95" Level="Error" Path="C:\DEV\SPSProfessional2\SPSProfessional.SharePoint.Framework\SPSProfessional.SharePoint.Framework\Tools" File="SPSEvaluator.cs" Line="273">Because the behavior of 'DateTime.ToString(string)' could vary based on the current user's locale settings, replace this call in 'SPSEvaluator.GetDateCalcFormatEvaluator(Match)' with a call to 'DateTime.ToString(string, IFormatProvider)'. If the result of 'DateTime.ToString(string, IFormatProvider)' will be displayed to the user, specify 'CultureInfo.CurrentCulture' as the 'IFormatProvider' parameter. Otherwise, if the result will be stored and accessed by software, such as when it is persisted to disk or to a database, specify 'CultureInfo.InvariantCulture'.</Issue>
+             <Issue Certainty="95" Level="Error" Path="C:\DEV\SPSProfessional2\SPSProfessional.SharePoint.Framework\SPSProfessional.SharePoint.Framework\Tools" File="SPSEvaluator.cs" Line="276">Because the behavior of 'DateTime.ToString(string)' could vary based on the current user's locale settings, replace this call in 'SPSEvaluator.GetDateCalcFormatEvaluator(Match)' with a call to 'DateTime.ToString(string, IFormatProvider)'. If the result of 'DateTime.ToString(string, IFormatProvider)' will be displayed to the user, specify 'CultureInfo.CurrentCulture' as the 'IFormatProvider' parameter. Otherwise, if the result will be stored and accessed by software, such as when it is persisted to disk or to a database, specify 'CultureInfo.InvariantCulture'.</Issue>
+             <Issue Certainty="95" Level="Error" Path="C:\DEV\SPSProfessional2\SPSProfessional.SharePoint.Framework\SPSProfessional.SharePoint.Framework\Tools" File="SPSEvaluator.cs" Line="279">Because the behavior of 'DateTime.ToString(string)' could vary based on the current user's locale settings, replace this call in 'SPSEvaluator.GetDateCalcFormatEvaluator(Match)' with a call to 'DateTime.ToString(string, IFormatProvider)'. If the result of 'DateTime.ToString(string, IFormatProvider)' will be displayed to the user, specify 'CultureInfo.CurrentCulture' as the 'IFormatProvider' parameter. Otherwise, if the result will be stored and accessed by software, such as when it is persisted to disk or to a database, specify 'CultureInfo.InvariantCulture'.</Issue>
+            </Message>
+            <Message Id="System.Int32.Parse(System.String)" TypeName="SpecifyIFormatProvider" Category="Microsoft.Globalization" CheckId="CA1305" Status="Active" Created="2008-09-14 22:34:59Z" FixCategory="DependsOnFix">
+             <Issue Certainty="95" Level="Error" Path="C:\DEV\SPSProfessional2\SPSProfessional.SharePoint.Framework\SPSProfessional.SharePoint.Framework\Tools" File="SPSEvaluator.cs" Line="268">Because the behavior of 'int.Parse(string)' could vary based on the current user's locale settings, replace this call in 'SPSEvaluator.GetDateCalcFormatEvaluator(Match)' with a call to 'int.Parse(string, IFormatProvider)'. If the result of 'int.Parse(string, IFormatProvider)' will be displayed to the user, specify 'CultureInfo.CurrentCulture' as the 'IFormatProvider' parameter. Otherwise, if the result will be stored and accessed by software, such as when it is persisted to disk or to a database, specify 'CultureInfo.InvariantCulture'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#GetDateFormatEvaluator(System.Text.RegularExpressions.Match)" Kind="Method" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message Id="System.DateTime.ToString(System.String)" TypeName="SpecifyIFormatProvider" Category="Microsoft.Globalization" CheckId="CA1305" Status="Active" Created="2008-09-14 22:34:59Z" FixCategory="DependsOnFix">
+             <Issue Certainty="95" Level="Error" Path="C:\DEV\SPSProfessional2\SPSProfessional.SharePoint.Framework\SPSProfessional.SharePoint.Framework\Tools" File="SPSEvaluator.cs" Line="232">Because the behavior of 'DateTime.ToString(string)' could vary based on the current user's locale settings, replace this call in 'SPSEvaluator.GetDateFormatEvaluator(Match)' with a call to 'DateTime.ToString(string, IFormatProvider)'. If the result of 'DateTime.ToString(string, IFormatProvider)' will be displayed to the user, specify 'CultureInfo.CurrentCulture' as the 'IFormatProvider' parameter. Otherwise, if the result will be stored and accessed by software, such as when it is persisted to disk or to a database, specify 'CultureInfo.InvariantCulture'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#InternalEvaluator(System.String)" Kind="Method" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message Id="System.DateTime.ToString(System.String)" TypeName="SpecifyIFormatProvider" Category="Microsoft.Globalization" CheckId="CA1305" Status="Active" Created="2008-09-14 22:34:59Z" FixCategory="DependsOnFix">
+             <Issue Certainty="95" Level="Error" Path="C:\DEV\SPSProfessional2\SPSProfessional.SharePoint.Framework\SPSProfessional.SharePoint.Framework\Tools" File="SPSEvaluator.cs" Line="60">Because the behavior of 'DateTime.ToString(string)' could vary based on the current user's locale settings, replace this call in 'SPSEvaluator.InternalEvaluator(string)' with a call to 'DateTime.ToString(string, IFormatProvider)'. If the result of 'DateTime.ToString(string, IFormatProvider)' will be displayed to the user, specify 'CultureInfo.CurrentCulture' as the 'IFormatProvider' parameter. Otherwise, if the result will be stored and accessed by software, such as when it is persisted to disk or to a database, specify 'CultureInfo.InvariantCulture'.</Issue>
+             <Issue Certainty="95" Level="Error" Path="C:\DEV\SPSProfessional2\SPSProfessional.SharePoint.Framework\SPSProfessional.SharePoint.Framework\Tools" File="SPSEvaluator.cs" Line="63">Because the behavior of 'DateTime.ToString(string)' could vary based on the current user's locale settings, replace this call in 'SPSEvaluator.InternalEvaluator(string)' with a call to 'DateTime.ToString(string, IFormatProvider)'. If the result of 'DateTime.ToString(string, IFormatProvider)' will be displayed to the user, specify 'CultureInfo.CurrentCulture' as the 'IFormatProvider' parameter. Otherwise, if the result will be stored and accessed by software, such as when it is persisted to disk or to a database, specify 'CultureInfo.InvariantCulture'.</Issue>
+            </Message>
+            <Message Id="System.Int32.ToString" TypeName="SpecifyIFormatProvider" Category="Microsoft.Globalization" CheckId="CA1305" Status="Active" Created="2008-09-14 22:34:59Z" FixCategory="DependsOnFix">
+             <Issue Certainty="95" Level="Error" Path="C:\DEV\SPSProfessional2\SPSProfessional.SharePoint.Framework\SPSProfessional.SharePoint.Framework\Tools" File="SPSEvaluator.cs" Line="66">Because the behavior of 'int.ToString()' could vary based on the current user's locale settings, replace this call in 'SPSEvaluator.InternalEvaluator(string)' with a call to 'int.ToString(IFormatProvider)'. If the result of 'int.ToString(IFormatProvider)' will be displayed to the user, specify 'CultureInfo.CurrentCulture' as the 'IFormatProvider' parameter. Otherwise, if the result will be stored and accessed by software, such as when it is persisted to disk or to a database, specify 'CultureInfo.InvariantCulture'.</Issue>
+             <Issue Certainty="95" Level="Error" Path="C:\DEV\SPSProfessional2\SPSProfessional.SharePoint.Framework\SPSProfessional.SharePoint.Framework\Tools" File="SPSEvaluator.cs" Line="69">Because the behavior of 'int.ToString()' could vary based on the current user's locale settings, replace this call in 'SPSEvaluator.InternalEvaluator(string)' with a call to 'int.ToString(IFormatProvider)'. If the result of 'int.ToString(IFormatProvider)' will be displayed to the user, specify 'CultureInfo.CurrentCulture' as the 'IFormatProvider' parameter. Otherwise, if the result will be stored and accessed by software, such as when it is persisted to disk or to a database, specify 'CultureInfo.InvariantCulture'.</Issue>
+             <Issue Certainty="95" Level="Error" Path="C:\DEV\SPSProfessional2\SPSProfessional.SharePoint.Framework\SPSProfessional.SharePoint.Framework\Tools" File="SPSEvaluator.cs" Line="72">Because the behavior of 'int.ToString()' could vary based on the current user's locale settings, replace this call in 'SPSEvaluator.InternalEvaluator(string)' with a call to 'int.ToString(IFormatProvider)'. If the result of 'int.ToString(IFormatProvider)' will be displayed to the user, specify 'CultureInfo.CurrentCulture' as the 'IFormatProvider' parameter. Otherwise, if the result will be stored and accessed by software, such as when it is persisted to disk or to a database, specify 'CultureInfo.InvariantCulture'.</Issue>
+             <Issue Certainty="95" Level="Error" Path="C:\DEV\SPSProfessional2\SPSProfessional.SharePoint.Framework\SPSProfessional.SharePoint.Framework\Tools" File="SPSEvaluator.cs" Line="89">Because the behavior of 'int.ToString()' could vary based on the current user's locale settings, replace this call in 'SPSEvaluator.InternalEvaluator(string)' with a call to 'int.ToString(IFormatProvider)'. If the result of 'int.ToString(IFormatProvider)' will be displayed to the user, specify 'CultureInfo.CurrentCulture' as the 'IFormatProvider' parameter. Otherwise, if the result will be stored and accessed by software, such as when it is persisted to disk or to a database, specify 'CultureInfo.InvariantCulture'.</Issue>
+            </Message>
+            <Message Id="System.String.StartsWith(System.String)" TypeName="SpecifyStringComparison" Category="Microsoft.Globalization" CheckId="CA1307" Status="Active" Created="2008-09-14 22:34:59Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Error" Path="C:\DEV\SPSProfessional2\SPSProfessional.SharePoint.Framework\SPSProfessional.SharePoint.Framework\Tools" File="SPSEvaluator.cs" Line="121">'SPSEvaluator.InternalEvaluator(string)' makes a call to 'string.StartsWith(string)' that does not explicitly provide a StringComparison. This should be replaced with a call to 'string.StartsWith(string, StringComparison)'.</Issue>
+             <Issue Certainty="95" Level="Error" Path="C:\DEV\SPSProfessional2\SPSProfessional.SharePoint.Framework\SPSProfessional.SharePoint.Framework\Tools" File="SPSEvaluator.cs" Line="126">'SPSEvaluator.InternalEvaluator(string)' makes a call to 'string.StartsWith(string)' that does not explicitly provide a StringComparison. This should be replaced with a call to 'string.StartsWith(string, StringComparison)'.</Issue>
+             <Issue Certainty="95" Level="Error" Path="C:\DEV\SPSProfessional2\SPSProfessional.SharePoint.Framework\SPSProfessional.SharePoint.Framework\Tools" File="SPSEvaluator.cs" Line="130">'SPSEvaluator.InternalEvaluator(string)' makes a call to 'string.StartsWith(string)' that does not explicitly provide a StringComparison. This should be replaced with a call to 'string.StartsWith(string, StringComparison)'.</Issue>
+             <Issue Certainty="95" Level="Error" Path="C:\DEV\SPSProfessional2\SPSProfessional.SharePoint.Framework\SPSProfessional.SharePoint.Framework\Tools" File="SPSEvaluator.cs" Line="134">'SPSEvaluator.InternalEvaluator(string)' makes a call to 'string.StartsWith(string)' that does not explicitly provide a StringComparison. This should be replaced with a call to 'string.StartsWith(string, StringComparison)'.</Issue>
+             <Issue Certainty="95" Level="Error" Path="C:\DEV\SPSProfessional2\SPSProfessional.SharePoint.Framework\SPSProfessional.SharePoint.Framework\Tools" File="SPSEvaluator.cs" Line="138">'SPSEvaluator.InternalEvaluator(string)' makes a call to 'string.StartsWith(string)' that does not explicitly provide a StringComparison. This should be replaced with a call to 'string.StartsWith(string, StringComparison)'.</Issue>
+             <Issue Certainty="95" Level="Error" Path="C:\DEV\SPSProfessional2\SPSProfessional.SharePoint.Framework\SPSProfessional.SharePoint.Framework\Tools" File="SPSEvaluator.cs" Line="142">'SPSEvaluator.InternalEvaluator(string)' makes a call to 'string.StartsWith(string)' that does not explicitly provide a StringComparison. This should be replaced with a call to 'string.StartsWith(string, StringComparison)'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="SPSFeatureReceiverHelper" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#GetFeatureResourcePath(System.String)" Kind="Method" Static="True" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message Id="System.String.Format(System.String,System.Object,System.Object)" TypeName="SpecifyIFormatProvider" Category="Microsoft.Globalization" CheckId="CA1305" Status="Active" Created="2008-09-14 22:34:59Z" FixCategory="DependsOnFix">
+             <Issue Certainty="95" Level="Error" Path="C:\DEV\SPSProfessional2\SPSProfessional.SharePoint.Framework\SPSProfessional.SharePoint.Framework\Tools" File="SPSFeatureReceiverHelper.cs" Line="83">Because the behavior of 'string.Format(string, object, object)' could vary based on the current user's locale settings, replace this call in 'SPSFeatureReceiverHelper.GetFeatureResourcePath(string)' with a call to 'string.Format(IFormatProvider, string, params object[])'. If the result of 'string.Format(IFormatProvider, string, params object[])' will be displayed to the user, specify 'CultureInfo.CurrentCulture' as the 'IFormatProvider' parameter. Otherwise, if the result will be stored and accessed by software, such as when it is persisted to disk or to a database, specify 'CultureInfo.InvariantCulture'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="SPSListTools" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Messages>
+          <Message TypeName="StaticHolderTypesShouldNotHaveConstructors" Category="Microsoft.Design" CheckId="CA1053" Status="Active" Created="2008-09-14 22:34:59Z" FixCategory="Breaking">
+           <Issue Certainty="90" Level="Error">Remove the public constructors from 'SPSListTools'.</Issue>
+          </Message>
+         </Messages>
+         <Members>
+          <Member Name="#GetListGuidFromListViewGuid(System.Web.HttpContext,System.String)" Kind="Method" Static="True" Accessibility="Assembly" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="AvoidUncalledPrivateCode" Category="Microsoft.Performance" CheckId="CA1811" Status="Active" Created="2008-09-14 22:34:59Z" FixCategory="NonBreaking">
+             <Issue Certainty="75" Level="Warning" Path="C:\DEV\SPSProfessional2\SPSProfessional.SharePoint.Framework\SPSProfessional.SharePoint.Framework\Tools" File="SPSListTools.cs" Line="49">'SPSListTools.GetListGuidFromListViewGuid(HttpContext, string)' appears to have no upstream public or protected callers.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="SPSTools" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#GetCurrentPageBaseUrl(System.Web.UI.Page)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="UriReturnValuesShouldNotBeStrings" Category="Microsoft.Design" CheckId="CA1055" Status="Active" Created="2008-09-14 22:34:59Z" FixCategory="Breaking">
+             <Issue Certainty="60" Level="Error" Path="C:\DEV\SPSProfessional2\SPSProfessional.SharePoint.Framework\SPSProfessional.SharePoint.Framework\Tools" File="SPSTools.cs" Line="51">Change the return type of 'SPSTools.GetCurrentPageBaseUrl(Page)' from string to System.Uri.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#GetCurrentUrl()" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="UriReturnValuesShouldNotBeStrings" Category="Microsoft.Design" CheckId="CA1055" Status="Active" Created="2008-09-14 22:34:59Z" FixCategory="Breaking">
+             <Issue Certainty="60" Level="Error" Path="C:\DEV\SPSProfessional2\SPSProfessional.SharePoint.Framework\SPSProfessional.SharePoint.Framework\Tools" File="SPSTools.cs" Line="67">Change the return type of 'SPSTools.GetCurrentUrl()' from string to System.Uri.</Issue>
+            </Message>
+            <Message TypeName="UsePropertiesWhereAppropriate" Category="Microsoft.Design" CheckId="CA1024" Status="Active" Created="2008-09-14 22:34:59Z" FixCategory="Breaking">
+             <Issue Certainty="50" Level="Warning" Path="C:\DEV\SPSProfessional2\SPSProfessional.SharePoint.Framework\SPSProfessional.SharePoint.Framework\Tools" File="SPSTools.cs" Line="67">Change 'SPSTools.GetCurrentUrl()' to a property if appropriate.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#IsIE55Plus(System.Web.HttpContext)" Kind="Method" Static="True" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message Id="System.String.IndexOf(System.String)" TypeName="SpecifyStringComparison" Category="Microsoft.Globalization" CheckId="CA1307" Status="Active" Created="2008-09-14 22:34:59Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Error" Path="C:\DEV\SPSProfessional2\SPSProfessional.SharePoint.Framework\SPSProfessional.SharePoint.Framework\Tools" File="SPSTools.cs" Line="35">'SPSTools.IsIE55Plus(HttpContext)' makes a call to 'string.IndexOf(string)' that does not explicitly provide a StringComparison. This should be replaced with a call to 'string.IndexOf(string, StringComparison)'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="SPSTreeViewHelper+TreeBound" Kind="Delegate" Accessibility="Public" ExternallyVisible="True">
+         <Messages>
+          <Message TypeName="NestedTypesShouldNotBeVisible" Category="Microsoft.Design" CheckId="CA1034" Status="Active" Created="2008-09-14 22:34:59Z" FixCategory="Breaking">
+           <Issue Certainty="90" Level="Error">Do not nest type 'SPSTreeViewHelper.TreeBound'. Alternatively, change its accessibility so that it is not externally visible.</Issue>
+          </Message>
+         </Messages>
+        </Type>
+        <Type Name="SPSXsltExtension" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#.ctor(System.Web.UI.Control,System.Web.UI.Page,SPSProfessional.SharePoint.Framework.Common.SPSKeyValueList)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="DoNotExposeGenericLists" Category="Microsoft.Design" CheckId="CA1002" Status="Active" Created="2008-09-14 22:34:59Z" FixCategory="Breaking">
+             <Issue Certainty="95" Level="Error" Path="C:\DEV\SPSProfessional2\SPSProfessional.SharePoint.Framework\SPSProfessional.SharePoint.Framework\Tools" File="SPSXsltExtension.cs" Line="46">Change 'SPSKeyValueList' in 'SPSXsltExtension.SPSXsltExtension(Control, Page, SPSKeyValueList)' to use Collection&lt;T&gt;, ReadOnlyCollection&lt;T&gt; or KeyedCollection&lt;K,V&gt;</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#DateDiff(System.String,System.DateTime,System.DateTime)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="DoNotCatchGeneralExceptionTypes" Category="Microsoft.Design" CheckId="CA1031" Status="Active" Created="2008-09-14 22:34:59Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="CriticalError" Path="C:\DEV\SPSProfessional2\SPSProfessional.SharePoint.Framework\SPSProfessional.SharePoint.Framework\Tools" File="SPSXsltExtension.cs" Line="260">Modify 'SPSXsltExtension.DateDiff(string, DateTime, DateTime)' to catch a more specific exception than 'Exception' or rethrow the exception.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#Event(System.String,System.String)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message Id="System.String.Format(System.String,System.Object,System.Object)" TypeName="SpecifyIFormatProvider" Category="Microsoft.Globalization" CheckId="CA1305" Status="Active" Created="2008-09-14 22:34:59Z" FixCategory="DependsOnFix">
+             <Issue Certainty="95" Level="Error" Path="C:\DEV\SPSProfessional2\SPSProfessional.SharePoint.Framework\SPSProfessional.SharePoint.Framework\Tools" File="SPSXsltExtension.cs" Line="159">Because the behavior of 'string.Format(string, object, object)' could vary based on the current user's locale settings, replace this call in 'SPSXsltExtension.Event(string, string)' with a call to 'string.Format(IFormatProvider, string, params object[])'. If the result of 'string.Format(IFormatProvider, string, params object[])' will be displayed to the user, specify 'CultureInfo.CurrentCulture' as the 'IFormatProvider' parameter. Otherwise, if the result will be stored and accessed by software, such as when it is persisted to disk or to a database, specify 'CultureInfo.InvariantCulture'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#EventJS(System.String,System.String)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message Id="System.String.Format(System.String,System.Object,System.Object)" TypeName="SpecifyIFormatProvider" Category="Microsoft.Globalization" CheckId="CA1305" Status="Active" Created="2008-09-14 22:34:59Z" FixCategory="DependsOnFix">
+             <Issue Certainty="95" Level="Error" Path="C:\DEV\SPSProfessional2\SPSProfessional.SharePoint.Framework\SPSProfessional.SharePoint.Framework\Tools" File="SPSXsltExtension.cs" Line="170">Because the behavior of 'string.Format(string, object, object)' could vary based on the current user's locale settings, replace this call in 'SPSXsltExtension.EventJS(string, string)' with a call to 'string.Format(IFormatProvider, string, params object[])'. If the result of 'string.Format(IFormatProvider, string, params object[])' will be displayed to the user, specify 'CultureInfo.CurrentCulture' as the 'IFormatProvider' parameter. Otherwise, if the result will be stored and accessed by software, such as when it is persisted to disk or to a database, specify 'CultureInfo.InvariantCulture'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#FormatDateTime(System.String,System.Int64,System.String)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="DoNotCatchGeneralExceptionTypes" Category="Microsoft.Design" CheckId="CA1031" Status="Active" Created="2008-09-14 22:34:59Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="CriticalError" Path="C:\DEV\SPSProfessional2\SPSProfessional.SharePoint.Framework\SPSProfessional.SharePoint.Framework\Tools" File="SPSXsltExtension.cs" Line="345">Modify 'SPSXsltExtension.FormatDateTime(string, long, string)' to catch a more specific exception than 'Exception' or rethrow the exception.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#FormatDateTime(System.String,System.String)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="DoNotCatchGeneralExceptionTypes" Category="Microsoft.Design" CheckId="CA1031" Status="Active" Created="2008-09-14 22:34:59Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="CriticalError" Path="C:\DEV\SPSProfessional2\SPSProfessional.SharePoint.Framework\SPSProfessional.SharePoint.Framework\Tools" File="SPSXsltExtension.cs" Line="378">Modify 'SPSXsltExtension.FormatDateTime(string, string)' to catch a more specific exception than 'Exception' or rethrow the exception.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#FormatIsoDateTime(System.String,System.Int64,System.String)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="DoNotCatchGeneralExceptionTypes" Category="Microsoft.Design" CheckId="CA1031" Status="Active" Created="2008-09-14 22:34:59Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="CriticalError" Path="C:\DEV\SPSProfessional2\SPSProfessional.SharePoint.Framework\SPSProfessional.SharePoint.Framework\Tools" File="SPSXsltExtension.cs" Line="406">Modify 'SPSXsltExtension.FormatIsoDateTime(string, long, string)' to catch a more specific exception than 'Exception' or rethrow the exception.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#FormatIsoDateTime(System.String,System.String)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="DoNotCatchGeneralExceptionTypes" Category="Microsoft.Design" CheckId="CA1031" Status="Active" Created="2008-09-14 22:34:59Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="CriticalError" Path="C:\DEV\SPSProfessional2\SPSProfessional.SharePoint.Framework\SPSProfessional.SharePoint.Framework\Tools" File="SPSXsltExtension.cs" Line="435">Modify 'SPSXsltExtension.FormatIsoDateTime(string, string)' to catch a more specific exception than 'Exception' or rethrow the exception.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#GetCalColor()" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="UsePropertiesWhereAppropriate" Category="Microsoft.Design" CheckId="CA1024" Status="Active" Created="2008-09-14 22:44:55Z" FixCategory="Breaking">
+             <Issue Certainty="75" Level="Warning" Path="C:\DEV\SPSProfessional2\SPSProfessional.SharePoint.Framework\SPSProfessional.SharePoint.Framework\Tools" File="SPSXsltExtension.cs" Line="289">Change 'SPSXsltExtension.GetCalColor()' to a property if appropriate.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#GetFcColor()" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="UsePropertiesWhereAppropriate" Category="Microsoft.Design" CheckId="CA1024" Status="Active" Created="2008-09-14 22:44:55Z" FixCategory="Breaking">
+             <Issue Certainty="75" Level="Warning" Path="C:\DEV\SPSProfessional2\SPSProfessional.SharePoint.Framework\SPSProfessional.SharePoint.Framework\Tools" File="SPSXsltExtension.cs" Line="276">Change 'SPSXsltExtension.GetFcColor()' to a property if appropriate.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#GetFileExtension(System.String)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message Id="0#" TypeName="UriParametersShouldNotBeStrings" Category="Microsoft.Design" CheckId="CA1054" Status="Active" Created="2008-09-14 22:34:59Z" FixCategory="Breaking">
+             <Issue Certainty="60" Level="Error" Path="C:\DEV\SPSProfessional2\SPSProfessional.SharePoint.Framework\SPSProfessional.SharePoint.Framework\Tools" File="SPSXsltExtension.cs" Line="449">Change the type of parameter 'targetUrl' of method 'SPSXsltExtension.GetFileExtension(string)' from string to System.Uri, or provide an overload of 'SPSXsltExtension.GetFileExtension(string)', that allows 'targetUrl' to be passed as a System.Uri object.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#GetStringBeforeSeparator(System.String)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message Id="System.String.IndexOf(System.String)" TypeName="SpecifyStringComparison" Category="Microsoft.Globalization" CheckId="CA1307" Status="Active" Created="2008-09-14 22:34:59Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Error" Path="C:\DEV\SPSProfessional2\SPSProfessional.SharePoint.Framework\SPSProfessional.SharePoint.Framework\Tools" File="SPSXsltExtension.cs" Line="465">'SPSXsltExtension.GetStringBeforeSeparator(string)' makes a call to 'string.IndexOf(string)' that does not explicitly provide a StringComparison. This should be replaced with a call to 'string.IndexOf(string, StringComparison)'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#IfNew(System.String)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="DoNotCatchGeneralExceptionTypes" Category="Microsoft.Design" CheckId="CA1031" Status="Active" Created="2008-09-14 22:34:59Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="CriticalError" Path="C:\DEV\SPSProfessional2\SPSProfessional.SharePoint.Framework\SPSProfessional.SharePoint.Framework\Tools" File="SPSXsltExtension.cs" Line="484">Modify 'SPSXsltExtension.IfNew(string)' to catch a more specific exception than 'Exception' or rethrow the exception.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#MapToIcon(System.String,System.String)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="DoNotCatchGeneralExceptionTypes" Category="Microsoft.Design" CheckId="CA1031" Status="Active" Created="2008-09-14 22:34:59Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="CriticalError" Path="C:\DEV\SPSProfessional2\SPSProfessional.SharePoint.Framework\SPSProfessional.SharePoint.Framework\Tools" File="SPSXsltExtension.cs" Line="223">Modify 'SPSXsltExtension.MapToIcon(string, string)' to catch a more specific exception than 'Exception' or rethrow the exception.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#Max(System.Xml.XPath.XPathNodeIterator)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message Id="System.Int32.Parse(System.String)" TypeName="SpecifyIFormatProvider" Category="Microsoft.Globalization" CheckId="CA1305" Status="Active" Created="2008-09-14 22:34:59Z" FixCategory="DependsOnFix">
+             <Issue Certainty="95" Level="Error" Path="C:\DEV\SPSProfessional2\SPSProfessional.SharePoint.Framework\SPSProfessional.SharePoint.Framework\Tools" File="SPSXsltExtension.cs" Line="527">Because the behavior of 'int.Parse(string)' could vary based on the current user's locale settings, replace this call in 'SPSXsltExtension.Max(XPathNodeIterator)' with a call to 'int.Parse(string, IFormatProvider)'. If the result of 'int.Parse(string, IFormatProvider)' will be displayed to the user, specify 'CultureInfo.CurrentCulture' as the 'IFormatProvider' parameter. Otherwise, if the result will be stored and accessed by software, such as when it is persisted to disk or to a database, specify 'CultureInfo.InvariantCulture'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#Min(System.Xml.XPath.XPathNodeIterator)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message Id="System.Int32.Parse(System.String)" TypeName="SpecifyIFormatProvider" Category="Microsoft.Globalization" CheckId="CA1305" Status="Active" Created="2008-09-14 22:34:59Z" FixCategory="DependsOnFix">
+             <Issue Certainty="95" Level="Error" Path="C:\DEV\SPSProfessional2\SPSProfessional.SharePoint.Framework\SPSProfessional.SharePoint.Framework\Tools" File="SPSXsltExtension.cs" Line="561">Because the behavior of 'int.Parse(string)' could vary based on the current user's locale settings, replace this call in 'SPSXsltExtension.Min(XPathNodeIterator)' with a call to 'int.Parse(string, IFormatProvider)'. If the result of 'int.Parse(string, IFormatProvider)' will be displayed to the user, specify 'CultureInfo.CurrentCulture' as the 'IFormatProvider' parameter. Otherwise, if the result will be stored and accessed by software, such as when it is persisted to disk or to a database, specify 'CultureInfo.InvariantCulture'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#UrlBaseName(System.String)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message Id="0#" TypeName="UriParametersShouldNotBeStrings" Category="Microsoft.Design" CheckId="CA1054" Status="Active" Created="2008-09-14 22:34:59Z" FixCategory="Breaking">
+             <Issue Certainty="60" Level="Error" Path="C:\DEV\SPSProfessional2\SPSProfessional.SharePoint.Framework\SPSProfessional.SharePoint.Framework\Tools" File="SPSXsltExtension.cs" Line="598">Change the type of parameter 'targetUrl' of method 'SPSXsltExtension.UrlBaseName(string)' from string to System.Uri, or provide an overload of 'SPSXsltExtension.UrlBaseName(string)', that allows 'targetUrl' to be passed as a System.Uri object.</Issue>
+            </Message>
+            <Message TypeName="UriReturnValuesShouldNotBeStrings" Category="Microsoft.Design" CheckId="CA1055" Status="Active" Created="2008-09-14 22:34:59Z" FixCategory="Breaking">
+             <Issue Certainty="60" Level="Error" Path="C:\DEV\SPSProfessional2\SPSProfessional.SharePoint.Framework\SPSProfessional.SharePoint.Framework\Tools" File="SPSXsltExtension.cs" Line="598">Change the return type of 'SPSXsltExtension.UrlBaseName(string)' from string to System.Uri.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#UrlDirName(System.String)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="DoNotCatchGeneralExceptionTypes" Category="Microsoft.Design" CheckId="CA1031" Status="Active" Created="2008-09-14 22:34:59Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="CriticalError" Path="C:\DEV\SPSProfessional2\SPSProfessional.SharePoint.Framework\SPSProfessional.SharePoint.Framework\Tools" File="SPSXsltExtension.cs" Line="624">Modify 'SPSXsltExtension.UrlDirName(string)' to catch a more specific exception than 'Exception' or rethrow the exception.</Issue>
+            </Message>
+            <Message Id="0#" TypeName="UriParametersShouldNotBeStrings" Category="Microsoft.Design" CheckId="CA1054" Status="Active" Created="2008-09-14 22:34:59Z" FixCategory="Breaking">
+             <Issue Certainty="60" Level="Error" Path="C:\DEV\SPSProfessional2\SPSProfessional.SharePoint.Framework\SPSProfessional.SharePoint.Framework\Tools" File="SPSXsltExtension.cs" Line="614">Change the type of parameter 'targetUrl' of method 'SPSXsltExtension.UrlDirName(string)' from string to System.Uri, or provide an overload of 'SPSXsltExtension.UrlDirName(string)', that allows 'targetUrl' to be passed as a System.Uri object.</Issue>
+            </Message>
+            <Message TypeName="UriReturnValuesShouldNotBeStrings" Category="Microsoft.Design" CheckId="CA1055" Status="Active" Created="2008-09-14 22:34:59Z" FixCategory="Breaking">
+             <Issue Certainty="60" Level="Error" Path="C:\DEV\SPSProfessional2\SPSProfessional.SharePoint.Framework\SPSProfessional.SharePoint.Framework\Tools" File="SPSXsltExtension.cs" Line="614">Change the return type of 'SPSXsltExtension.UrlDirName(string)' from string to System.Uri.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#UrlEncode(System.String)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="UriReturnValuesShouldNotBeStrings" Category="Microsoft.Design" CheckId="CA1055" Status="Active" Created="2008-09-14 22:34:59Z" FixCategory="Breaking">
+             <Issue Certainty="60" Level="Error" Path="C:\DEV\SPSProfessional2\SPSProfessional.SharePoint.Framework\SPSProfessional.SharePoint.Framework\Tools" File="SPSXsltExtension.cs" Line="637">Change the return type of 'SPSXsltExtension.UrlEncode(string)' from string to System.Uri.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+       </Types>
+      </Namespace>
+      <Namespace Name="SPSProfessional.SharePoint.Framework.WebPartCache">
+       <Types>
+        <Type Name="ISPSCacheManager" Kind="Interface" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#Get`1(System.String)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="GenericMethodsShouldProvideTypeParameter" Category="Microsoft.Design" CheckId="CA1004" Status="Active" Created="2008-09-14 22:34:59Z" FixCategory="Breaking">
+             <Issue Certainty="75" Level="Warning">Consider a design where 'ISPSCacheManager.Get&lt;T&gt;(string)' doesn't require explicit type parameter 'T' in any call to it.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="IWebPartCache" Kind="Interface" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#GetCacheService()" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="UsePropertiesWhereAppropriate" Category="Microsoft.Design" CheckId="CA1024" Status="Active" Created="2008-09-14 22:34:59Z" FixCategory="Breaking">
+             <Issue Certainty="50" Level="Warning">Change 'IWebPartCache.GetCacheService()' to a property if appropriate.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="SPSCacheEditorPart" Kind="Class" Accessibility="Assembly" ExternallyVisible="False">
+         <Members>
+          <Member Name="#ApplyChanges()" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="DoNotCatchGeneralExceptionTypes" Category="Microsoft.Design" CheckId="CA1031" Status="Active" Created="2008-09-14 22:34:59Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="CriticalError" Path="C:\DEV\SPSProfessional2\SPSProfessional.SharePoint.Framework\SPSProfessional.SharePoint.Framework\WebPartCache" File="SPSCacheEditorPart.cs" Line="50">Modify 'SPSCacheEditorPart.ApplyChanges()' to catch a more specific exception than 'Exception' or rethrow the exception.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#CreateChildControls()" Kind="Method" Static="False" Accessibility="Family" ExternallyVisible="False">
+           <Messages>
+            <Message Id="System.Web.UI.WebControls.Unit.#ctor(System.String)" TypeName="SpecifyCultureInfo" Category="Microsoft.Globalization" CheckId="CA1304" Status="Active" Created="2008-09-14 22:34:59Z" FixCategory="DependsOnFix">
+             <Issue Certainty="95" Level="Error" Path="C:\DEV\SPSProfessional2\SPSProfessional.SharePoint.Framework\SPSProfessional.SharePoint.Framework\WebPartCache" File="SPSCacheEditorPart.cs" Line="77">Because the behavior of 'Unit.Unit(string)' could vary based on the current user's locale settings, replace this call in 'SPSCacheEditorPart.CreateChildControls()' with a call to 'Unit.Unit(string, CultureInfo)'. If the result of 'Unit.Unit(string, CultureInfo)' will be displayed to the user, specify 'CultureInfo.CurrentCulture' as the 'CultureInfo' parameter. Otherwise, if the result will be stored and accessed by software, such as when it is persisted to disk or to a database, specify 'CultureInfo.InvariantCulture'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#SyncChanges()" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="False">
+           <Messages>
+            <Message Id="System.Int32.ToString" TypeName="SpecifyIFormatProvider" Category="Microsoft.Globalization" CheckId="CA1305" Status="Active" Created="2008-09-14 22:34:59Z" FixCategory="DependsOnFix">
+             <Issue Certainty="95" Level="Error" Path="C:\DEV\SPSProfessional2\SPSProfessional.SharePoint.Framework\SPSProfessional.SharePoint.Framework\WebPartCache" File="SPSCacheEditorPart.cs" Line="66">Because the behavior of 'int.ToString()' could vary based on the current user's locale settings, replace this call in 'SPSCacheEditorPart.SyncChanges()' with a call to 'int.ToString(IFormatProvider)'. If the result of 'int.ToString(IFormatProvider)' will be displayed to the user, specify 'CultureInfo.CurrentCulture' as the 'IFormatProvider' parameter. Otherwise, if the result will be stored and accessed by software, such as when it is persisted to disk or to a database, specify 'CultureInfo.InvariantCulture'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="SPSCacheManager" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Messages>
+          <Message TypeName="CollectionsShouldImplementGenericInterface" Category="Microsoft.Design" CheckId="CA1010" Status="Active" Created="2008-09-14 22:34:59Z" FixCategory="NonBreaking">
+           <Issue Certainty="60" Level="Error">'SPSCacheManager' appears to be a non-generic, strongly typed collection. Add an implementation to the instance of IEnumerable&lt;T&gt; where T is the underlying element type of 'SPSCacheManager'.</Issue>
+          </Message>
+         </Messages>
+         <Members>
+          <Member Name="#Get`1(System.String)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="GenericMethodsShouldProvideTypeParameter" Category="Microsoft.Design" CheckId="CA1004" Status="Active" Created="2008-09-14 22:34:59Z" FixCategory="Breaking">
+             <Issue Certainty="75" Level="Warning" Path="C:\DEV\SPSProfessional2\SPSProfessional.SharePoint.Framework\SPSProfessional.SharePoint.Framework\WebPartCache" File="SPSCacheManager.cs" Line="56">Consider a design where 'SPSCacheManager.Get&lt;T&gt;(string)' doesn't require explicit type parameter 'T' in any call to it.</Issue>
+            </Message>
+            <Message Id="System.String.Format(System.String,System.Object)" TypeName="SpecifyIFormatProvider" Category="Microsoft.Globalization" CheckId="CA1305" Status="Active" Created="2008-09-14 22:34:59Z" FixCategory="DependsOnFix">
+             <Issue Certainty="95" Level="Error" Path="C:\DEV\SPSProfessional2\SPSProfessional.SharePoint.Framework\SPSProfessional.SharePoint.Framework\WebPartCache" File="SPSCacheManager.cs" Line="57">Because the behavior of 'string.Format(string, object)' could vary based on the current user's locale settings, replace this call in 'SPSCacheManager.Get&lt;T&gt;(string)' with a call to 'string.Format(IFormatProvider, string, params object[])'. If the result of 'string.Format(IFormatProvider, string, params object[])' will be displayed to the user, specify 'CultureInfo.CurrentCulture' as the 'IFormatProvider' parameter. Otherwise, if the result will be stored and accessed by software, such as when it is persisted to disk or to a database, specify 'CultureInfo.InvariantCulture'.</Issue>
+             <Issue Certainty="95" Level="Error" Path="C:\DEV\SPSProfessional2\SPSProfessional.SharePoint.Framework\SPSProfessional.SharePoint.Framework\WebPartCache" File="SPSCacheManager.cs" Line="62">Because the behavior of 'string.Format(string, object)' could vary based on the current user's locale settings, replace this call in 'SPSCacheManager.Get&lt;T&gt;(string)' with a call to 'string.Format(IFormatProvider, string, params object[])'. If the result of 'string.Format(IFormatProvider, string, params object[])' will be displayed to the user, specify 'CultureInfo.CurrentCulture' as the 'IFormatProvider' parameter. Otherwise, if the result will be stored and accessed by software, such as when it is persisted to disk or to a database, specify 'CultureInfo.InvariantCulture'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#Get`1(System.String,SPSProfessional.SharePoint.Framework.Tools.Func`1&lt;!!0&gt;)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message Id="System.String.Format(System.String,System.Object)" TypeName="SpecifyIFormatProvider" Category="Microsoft.Globalization" CheckId="CA1305" Status="Active" Created="2008-09-14 22:34:59Z" FixCategory="DependsOnFix">
+             <Issue Certainty="95" Level="Error" Path="C:\DEV\SPSProfessional2\SPSProfessional.SharePoint.Framework\SPSProfessional.SharePoint.Framework\WebPartCache" File="SPSCacheManager.cs" Line="37">Because the behavior of 'string.Format(string, object)' could vary based on the current user's locale settings, replace this call in 'SPSCacheManager.Get&lt;T&gt;(string, Func&lt;T&gt;)' with a call to 'string.Format(IFormatProvider, string, params object[])'. If the result of 'string.Format(IFormatProvider, string, params object[])' will be displayed to the user, specify 'CultureInfo.CurrentCulture' as the 'IFormatProvider' parameter. Otherwise, if the result will be stored and accessed by software, such as when it is persisted to disk or to a database, specify 'CultureInfo.InvariantCulture'.</Issue>
+            </Message>
+            <Message Id="System.String.Format(System.String,System.Object[])" TypeName="SpecifyIFormatProvider" Category="Microsoft.Globalization" CheckId="CA1305" Status="Active" Created="2008-09-14 22:34:59Z" FixCategory="DependsOnFix">
+             <Issue Certainty="95" Level="Error" Path="C:\DEV\SPSProfessional2\SPSProfessional.SharePoint.Framework\SPSProfessional.SharePoint.Framework\WebPartCache" File="SPSCacheManager.cs" Line="42">Because the behavior of 'string.Format(string, params object[])' could vary based on the current user's locale settings, replace this call in 'SPSCacheManager.Get&lt;T&gt;(string, Func&lt;T&gt;)' with a call to 'string.Format(IFormatProvider, string, params object[])'. If the result of 'string.Format(IFormatProvider, string, params object[])' will be displayed to the user, specify 'CultureInfo.CurrentCulture' as the 'IFormatProvider' parameter. Otherwise, if the result will be stored and accessed by software, such as when it is persisted to disk or to a database, specify 'CultureInfo.InvariantCulture'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#Insert(System.String,System.Object)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message Id="System.String.Format(System.String,System.Object)" TypeName="SpecifyIFormatProvider" Category="Microsoft.Globalization" CheckId="CA1305" Status="Active" Created="2008-09-14 22:34:59Z" FixCategory="DependsOnFix">
+             <Issue Certainty="95" Level="Error" Path="C:\DEV\SPSProfessional2\SPSProfessional.SharePoint.Framework\SPSProfessional.SharePoint.Framework\WebPartCache" File="SPSCacheManager.cs" Line="74">Because the behavior of 'string.Format(string, object)' could vary based on the current user's locale settings, replace this call in 'SPSCacheManager.Insert(string, object)' with a call to 'string.Format(IFormatProvider, string, params object[])'. If the result of 'string.Format(IFormatProvider, string, params object[])' will be displayed to the user, specify 'CultureInfo.CurrentCulture' as the 'IFormatProvider' parameter. Otherwise, if the result will be stored and accessed by software, such as when it is persisted to disk or to a database, specify 'CultureInfo.InvariantCulture'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#RemoveCallback(System.String,System.Object,System.Web.Caching.CacheItemRemovedReason)" Kind="Method" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message Id="System.String.Format(System.String,System.Object,System.Object)" TypeName="SpecifyIFormatProvider" Category="Microsoft.Globalization" CheckId="CA1305" Status="Active" Created="2008-09-14 22:34:59Z" FixCategory="DependsOnFix">
+             <Issue Certainty="95" Level="Error" Path="C:\DEV\SPSProfessional2\SPSProfessional.SharePoint.Framework\SPSProfessional.SharePoint.Framework\WebPartCache" File="SPSCacheManager.cs" Line="95">Because the behavior of 'string.Format(string, object, object)' could vary based on the current user's locale settings, replace this call in 'SPSCacheManager.RemoveCallback(string, object, CacheItemRemovedReason)' with a call to 'string.Format(IFormatProvider, string, params object[])'. If the result of 'string.Format(IFormatProvider, string, params object[])' will be displayed to the user, specify 'CultureInfo.CurrentCulture' as the 'IFormatProvider' parameter. Otherwise, if the result will be stored and accessed by software, such as when it is persisted to disk or to a database, specify 'CultureInfo.InvariantCulture'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="SPSCacheService" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#.ctor(System.Int32,System.String)" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message Id="System.String.Format(System.String,System.Object,System.Object)" TypeName="SpecifyIFormatProvider" Category="Microsoft.Globalization" CheckId="CA1305" Status="Active" Created="2008-09-14 22:34:59Z" FixCategory="DependsOnFix">
+             <Issue Certainty="95" Level="Error" Path="C:\DEV\SPSProfessional2\SPSProfessional.SharePoint.Framework\SPSProfessional.SharePoint.Framework\WebPartCache" File="SPSCacheService.cs" Line="23">Because the behavior of 'string.Format(string, object, object)' could vary based on the current user's locale settings, replace this call in 'SPSCacheService.SPSCacheService(int, string)' with a call to 'string.Format(IFormatProvider, string, params object[])'. If the result of 'string.Format(IFormatProvider, string, params object[])' will be displayed to the user, specify 'CultureInfo.CurrentCulture' as the 'IFormatProvider' parameter. Otherwise, if the result will be stored and accessed by software, such as when it is persisted to disk or to a database, specify 'CultureInfo.InvariantCulture'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#RemoveAll()" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message Id="System.String.StartsWith(System.String)" TypeName="SpecifyStringComparison" Category="Microsoft.Globalization" CheckId="CA1307" Status="Active" Created="2008-09-14 22:34:59Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Error" Path="C:\DEV\SPSProfessional2\SPSProfessional.SharePoint.Framework\SPSProfessional.SharePoint.Framework\WebPartCache" File="SPSCacheService.cs" Line="61">'SPSCacheService.RemoveAll()' makes a call to 'string.StartsWith(string)' that does not explicitly provide a StringComparison. This should be replaced with a call to 'string.StartsWith(string, StringComparison)'.</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+       </Types>
+      </Namespace>
+     </Namespaces>
+    </Module>
+   </Modules>
+  </Target>
+ </Targets>
+ <Rules>
+  <Rule TypeName="AvoidUncalledPrivateCode" Category="Microsoft.Performance" CheckId="CA1811">
+   <Name>Avoid uncalled private code</Name>
+   <Description>There is uncalled code that is not externally visible and is not a known runtime entry point. If this violation fires in error, please send a problem report to the Visual Studio Code Analysis team.</Description>
+   <Resolution Name="Default">{0} appears to have no upstream public or protected callers.</Resolution>
+   <Owner />
+   <Url>http://msdn2.microsoft.com/library/ms182264(VS.90).aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="75">Warning</MessageLevel>
+   <File Name="PerformanceRules.dll" Version="9.0.0.0" />
+  </Rule>
+  <Rule TypeName="CollectionPropertiesShouldBeReadOnly" Category="Microsoft.Usage" CheckId="CA2227">
+   <Name>Collection properties should be read only</Name>
+   <Description>Properties that return collections should be read-only so that users cannot entirely replace the backing store. Users can still modify the contents of the collection by calling relevant methods on the collection. Note that the XmlSerializer class has special support for deserializing read-only collections. See the XmlSerializer overview for more information.</Description>
+   <Resolution Name="Default">Change {0} to be read-only by removing the property setter.</Resolution>
+   <Owner />
+   <Url>http://msdn2.microsoft.com/library/ms182327(VS.90).aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="75">Warning</MessageLevel>
+   <File Name="UsageRules.dll" Version="9.0.0.0" />
+  </Rule>
+  <Rule TypeName="CollectionsShouldImplementGenericInterface" Category="Microsoft.Design" CheckId="CA1010">
+   <Name>Collections should implement generic interface</Name>
+   <Description>Non-generic strongly typed collections should implement one of the generic collection interfaces. This will allow better integration of the collection with generic API.</Description>
+   <Resolution Name="Default">{0} appears to be a non-generic, strongly typed collection. Add an implementation to the instance of {1}&lt;T&gt; where T is the underlying element type of {0}.</Resolution>
+   <Owner />
+   <Url>http://msdn2.microsoft.com/library/ms182132(VS.90).aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="90">Error</MessageLevel>
+   <File Name="DesignRules.dll" Version="9.0.0.0" />
+  </Rule>
+  <Rule TypeName="ConsiderPassingBaseTypesAsParameters" Category="Microsoft.Design" CheckId="CA1011">
+   <Name>Consider passing base types as parameters</Name>
+   <Description>Using base types as parameters to methods improves re-use of these methods if you only use methods &amp; properties from the parameter's base class. E.g. use Stream instead of FileStream as a parameter when only calling Stream.Read(), this makes the method work on all kind of streams instead of just File streams.</Description>
+   <Resolution Name="Default">Consider changing the type of parameter {0} in {1} from {2} to its base type {3}. This method appears to only require base class members in its implementation. Suppress this violation if there is a compelling reason to require the more derived type in the method signature.</Resolution>
+   <Owner />
+   <Url>http://msdn2.microsoft.com/library/3hk32yyz(VS.90).aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="50">Error</MessageLevel>
+   <File Name="DesignRules.dll" Version="9.0.0.0" />
+  </Rule>
+  <Rule TypeName="DeclareEventHandlersCorrectly" Category="Microsoft.Design" CheckId="CA1009">
+   <Name>Declare event handlers correctly</Name>
+   <Description>By convention, .NET events have two parameters that specify the event sender and event data. Event handler signatures should follow this form: void MyEventHandler(object sender, EventArgs e). The 'sender' parameter is always of type System.Object, even if it is possible to employ a more specific type. The 'e' parameter is always of type System.EventArgs. Events that do not provide event data should use the System.EventHandler delegate type. Event handlers return void so that they can send each event to multiple target methods. Any value returned by a target would be lost after the first call.</Description>
+   <Resolution Name="Return">Change {0} to return void.</Resolution>
+   <Resolution Name="Second">Declare the second parameter of {0} as an EventArgs, or an instance of a type that extends EventArgs, named 'e'.</Resolution>
+   <Owner />
+   <Url>http://msdn2.microsoft.com/library/ms182133(VS.90).aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="95">Error</MessageLevel>
+   <File Name="DesignRules.dll" Version="9.0.0.0" />
+  </Rule>
+  <Rule TypeName="DoNotCatchGeneralExceptionTypes" Category="Microsoft.Design" CheckId="CA1031">
+   <Name>Do not catch general exception types</Name>
+   <Description>You should not catch Exception or SystemException. Catching generic exception types can hide run-time problems from the library user, and can complicate debugging. You should catch only those exceptions that you can handle gracefully.</Description>
+   <Resolution Name="Default">Modify {0} to catch a more specific exception than {1} or rethrow the exception.</Resolution>
+   <Owner />
+   <Url>http://msdn2.microsoft.com/library/ms182137(VS.90).aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="95">CriticalError</MessageLevel>
+   <File Name="DesignRules.dll" Version="9.0.0.0" />
+  </Rule>
+  <Rule TypeName="DoNotDeclareVisibleInstanceFields" Category="Microsoft.Design" CheckId="CA1051">
+   <Name>Do not declare visible instance fields</Name>
+   <Description>Instance fields that are visible outside of the type that declares them, limit your ability to change the implementation details for those data items. Use properties instead. They do not compromise usability or performance and they do provide flexibility in that they conceal the implementation details of the underlying data.</Description>
+   <Resolution Name="Default">Because field {0} is visible outside of its declaring type, change its accessibility to private and add a property, with the same accessibility as the field has currently, to provide access to it.</Resolution>
+   <Owner />
+   <Url>http://msdn2.microsoft.com/library/ms182141(VS.90).aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="90">Error</MessageLevel>
+   <File Name="DesignRules.dll" Version="9.0.0.0" />
+  </Rule>
+  <Rule TypeName="DoNotExposeGenericLists" Category="Microsoft.Design" CheckId="CA1002">
+   <Name>Do not expose generic lists</Name>
+   <Description>Do not expose List&lt;T&gt; in object models. Use Collection&lt;T&gt;, ReadOnlyCollection&lt;T&gt; or KeyedCollection&lt;K,V&gt; instead. List&lt;T&gt; is meant to be used from implementation, not in object model API. List&lt;T&gt; is optimized for performance at the cost of long term versioning. For example, if you return List&lt;T&gt; to the client code, you will not ever be able to receive notifications when client code modifies the collection.</Description>
+   <Resolution Name="Default">Change {0} in {1} to use Collection&lt;T&gt;, ReadOnlyCollection&lt;T&gt; or KeyedCollection&lt;K,V&gt;</Resolution>
+   <Owner />
+   <Url>http://msdn2.microsoft.com/library/ms182142(VS.90).aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="95">Error</MessageLevel>
+   <File Name="DesignRules.dll" Version="9.0.0.0" />
+  </Rule>
+  <Rule TypeName="DoNotNestGenericTypesInMemberSignatures" Category="Microsoft.Design" CheckId="CA1006">
+   <Name>Do not nest generic types in member signatures</Name>
+   <Description>Avoid API that require users to instantiate a generic type with another generic type as type argument. The syntax gets too complex.</Description>
+   <Resolution Name="Default">Consider a design where {0} doesn't nest generic type {1}.</Resolution>
+   <Owner />
+   <Url>http://msdn2.microsoft.com/library/ms182144(VS.90).aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="95">CriticalError</MessageLevel>
+   <File Name="DesignRules.dll" Version="9.0.0.0" />
+  </Rule>
+  <Rule TypeName="GenericMethodsShouldProvideTypeParameter" Category="Microsoft.Design" CheckId="CA1004">
+   <Name>Generic methods should provide type parameter</Name>
+   <Description>Methods where the type parameter cannot be inferred from the parameters and therefore has to be defined in the method call are too difficult to understand. Methods with a formal parameter typed as the generic method type parameter support inference. Methods with no formal parameter typed as the generic method type parameter don't support inference.</Description>
+   <Resolution Name="Default">Consider a design where {0} doesn't require explicit type parameter {1} in any call to it.</Resolution>
+   <Owner />
+   <Url>http://msdn2.microsoft.com/library/ms182150(VS.90).aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="75">Warning</MessageLevel>
+   <File Name="DesignRules.dll" Version="9.0.0.0" />
+  </Rule>
+  <Rule TypeName="ICollectionImplementationsHaveStronglyTypedMembers" Category="Microsoft.Design" CheckId="CA1035">
+   <Name>ICollection implementations have strongly typed members</Name>
+   <Description>Types that implement ICollection should also provide a version of CopyTo with the first parameter set to a strong type, namely a type other than an array of objects or System.Array. Implement the interface member explicitly and make the strongly typed version public. It is safe to ignore violations of this rule when you are implementing a new object-based collection, such as a binary tree, where types based on your collection will determine what the strong type is. These types should expose strongly typed members.</Description>
+   <Resolution Name="Default">{0} should provide a strongly typed implementation of ICollection.CopyTo.</Resolution>
+   <Owner />
+   <Url>http://msdn2.microsoft.com/library/49stb304(VS.90).aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="90">Error</MessageLevel>
+   <File Name="DesignRules.dll" Version="9.0.0.0" />
+  </Rule>
+  <Rule TypeName="ImplementSerializationConstructors" Category="Microsoft.Usage" CheckId="CA2229">
+   <Name>Implement serialization constructors</Name>
+   <Description>The constructor signature accepts the same arguments as ISerializable.GetObjectData, namely, a SerializationInfo instance and a StreamingContext instance. The constructor should be protected for non-sealed classes and private for sealed classes. Failure to implement a serialization constructor will cause deserialization to fail, and throw a SerializationException.</Description>
+   <Resolution Name="MakeUnsealedMagicConstructorFamily">Declare the serialization constructor of {0}, an unsealed type, as protected.</Resolution>
+   <Owner />
+   <Url>http://msdn2.microsoft.com/library/ms182343(VS.90).aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="95">Error</MessageLevel>
+   <File Name="UsageRules.dll" Version="9.0.0.0" />
+  </Rule>
+  <Rule TypeName="ListsAreStronglyTyped" Category="Microsoft.Design" CheckId="CA1039">
+   <Name>Lists are strongly typed</Name>
+   <Description>IList implementations should also provide versions of the IList members that are strongly typed, namely they should specify types other than Object for method and property parameter and return types. Implement the interface members explicitly and make the strongly typed versions public. It is safe to ignore violations of this rule when you are implementing a new object-based collection, such as a linked list, where types based on your collection will determine what the strong type is. These types should expose strongly typed members.</Description>
+   <Resolution Name="Default">{0} should provide a strongly typed implementation of IList.{1}.</Resolution>
+   <Owner />
+   <Url>http://msdn2.microsoft.com/library/ms182154(VS.90).aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="90">Error</MessageLevel>
+   <File Name="DesignRules.dll" Version="9.0.0.0" />
+  </Rule>
+  <Rule TypeName="MarkAssembliesWithClsCompliant" Category="Microsoft.Design" CheckId="CA1014">
+   <Name>Mark assemblies with CLSCompliantAttribute</Name>
+   <Description>Assemblies should explicitly state their CLS compliance using the CLSCompliant attribute. An assembly without this attribute is not CLS-compliant. Assemblies, modules, and types can be CLS-compliant even if some parts of the assembly, module, or type are not CLS-compliant. The following rules apply: 1) If the element is marked CLSCompliant, any noncompliant members must have the CLSCompliant attribute present with its argument set to false. 2) A comparable CLS-compliant alternative member must be supplied for each member that is not CLS-compliant.</Description>
+   <Resolution Name="Default">Mark {0} with CLSCompliant(true) because it exposes externally visible types.</Resolution>
+   <Owner />
+   <Url>http://msdn2.microsoft.com/library/ms182156(VS.90).aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="95">Error</MessageLevel>
+   <File Name="DesignRules.dll" Version="9.0.0.0" />
+  </Rule>
+  <Rule TypeName="NestedTypesShouldNotBeVisible" Category="Microsoft.Design" CheckId="CA1034">
+   <Name>Nested types should not be visible</Name>
+   <Description>Do not use public, protected or protected internal (Protected Friend) nested types as a way of grouping types. Use namespaces for this purpose. There are very limited scenarios where nested types are the best design. Also, nested type member accessibility is not clearly understood by all audiences. Enumerators are exempt from this rule.</Description>
+   <Resolution Name="Default">Do not nest type {0}. Alternatively, change its accessibility so that it is not externally visible.</Resolution>
+   <Owner />
+   <Url>http://msdn2.microsoft.com/library/ms182162(VS.90).aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="90">Error</MessageLevel>
+   <File Name="DesignRules.dll" Version="9.0.0.0" />
+  </Rule>
+  <Rule TypeName="OperationsShouldNotOverflow" Category="Microsoft.Usage" CheckId="CA2233">
+   <Name>Operations should not overflow</Name>
+   <Description>Arithmetic operations should not be done without first validating the operands to prevent overflow.</Description>
+   <Resolution Name="Default">Correct the potential overflow in the operation '{0}' in {1}.</Resolution>
+   <Owner />
+   <Url>http://msdn2.microsoft.com/library/ms182354(VS.90).aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="75">CriticalWarning</MessageLevel>
+   <File Name="UsageRules.dll" Version="9.0.0.0" />
+  </Rule>
+  <Rule TypeName="OverrideLinkDemandsShouldBeIdenticalToBase" Category="Microsoft.Security" CheckId="CA2123">
+   <Name>Override link demands should be identical to base</Name>
+   <Description>If a virtual method has a LinkDemand, in many cases, so should any override of it, and if an override has a LinkDemand, so should the overridden virtual method. Because it is possible to call any of the overrides of a virtual method explicitly, they should all have the same LinkDemand status or, if not, should be reviewed. This also applies to LinkDemand security checks for methods that part of an interface implementation, because the caller might use an interface-typed reference to access the method.</Description>
+   <Resolution Name="BaseOnly">Add the following security attribute to {0} in order to match a LinkDemand on base method {1}:  {2}.</Resolution>
+   <Owner />
+   <Url>http://msdn2.microsoft.com/library/ms182305(VS.90).aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="33">CriticalError</MessageLevel>
+   <File Name="SecurityRules.dll" Version="9.0.0.0" />
+  </Rule>
+  <Rule TypeName="PropertiesShouldNotReturnArrays" Category="Microsoft.Performance" CheckId="CA1819">
+   <Name>Properties should not return arrays</Name>
+   <Description>Properties that return arrays are prone to code inefficiencies. Consider using a collection or making this a method. See the design guidelines for more information.</Description>
+   <Resolution Name="Default">Change {0} to return a collection or make it a method.</Resolution>
+   <Owner />
+   <Url>http://msdn2.microsoft.com/library/0fss9skc(VS.90).aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="50">Warning</MessageLevel>
+   <File Name="PerformanceRules.dll" Version="9.0.0.0" />
+  </Rule>
+  <Rule TypeName="SpecifyCultureInfo" Category="Microsoft.Globalization" CheckId="CA1304">
+   <Name>Specify CultureInfo</Name>
+   <Description>If an overload exists that takes a CultureInfo argument, it should always be called in favor of an overload that does not. The CultureInfo type contains culture-specific information required for performing numeric and string operations, such as casing, formatting, and string comparisons. In scenarios where conversion and parsing behavior should never change between cultures, specify CultureInfo.InvariantCulture, otherwise, specify CultureInfo.CurrentCulture.</Description>
+   <Resolution Name="Default">Because the behavior of {0} could vary based on the current user's locale settings, replace this call in {1} with a call to {2}. If the result of {2} will be displayed to the user, specify 'CultureInfo.CurrentCulture' as the 'CultureInfo' parameter. Otherwise, if the result will be stored and accessed by software, such as when it is persisted to disk or to a database, specify 'CultureInfo.InvariantCulture'.</Resolution>
+   <Owner />
+   <Url>http://msdn2.microsoft.com/library/ms182189(VS.90).aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="95">Error</MessageLevel>
+   <File Name="GlobalizationRules.dll" Version="9.0.0.0" />
+  </Rule>
+  <Rule TypeName="SpecifyIFormatProvider" Category="Microsoft.Globalization" CheckId="CA1305">
+   <Name>Specify IFormatProvider</Name>
+   <Description>If an overload exists that takes an IFormatProvider argument, it should always be called in favor of an overload that does not. Some methods in the runtime convert a value to or from a string representation and take a string parameter that contains one or more characters, called format specifiers, which indicate how the value is to be converted. If the meaning of the format specifier varies by culture, a formatting object supplies the actual characters used in the string representation. In scenarios where sorting and comparison behavior should never change between cultures, specify CultureInfo.InvariantCulture, otherwise, specify CultureInfo.CurrentCulture.</Description>
+   <Resolution Name="Default">Because the behavior of {0} could vary based on the current user's locale settings, replace this call in {1} with a call to {2}. If the result of {2} will be displayed to the user, specify 'CultureInfo.CurrentCulture' as the 'IFormatProvider' parameter. Otherwise, if the result will be stored and accessed by software, such as when it is persisted to disk or to a database, specify 'CultureInfo.InvariantCulture'.</Resolution>
+   <Owner />
+   <Url>http://msdn2.microsoft.com/library/ms182190(VS.90).aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="95">Error</MessageLevel>
+   <File Name="GlobalizationRules.dll" Version="9.0.0.0" />
+  </Rule>
+  <Rule TypeName="SpecifyStringComparison" Category="Microsoft.Globalization" CheckId="CA1307">
+   <Name>Specify StringComparison</Name>
+   <Description>If an overload exists that takes a StringComparison argument, it should always be called in favor of an overload that does not.</Description>
+   <Resolution Name="Default">{0} makes a call to {1} that does not explicitly provide a StringComparison. This should be replaced with a call to {2}.</Resolution>
+   <Owner />
+   <Url>http://msdn2.microsoft.com/library/bb386080(VS.90).aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="95">Error</MessageLevel>
+   <File Name="GlobalizationRules.dll" Version="9.0.0.0" />
+  </Rule>
+  <Rule TypeName="StaticHolderTypesShouldNotHaveConstructors" Category="Microsoft.Design" CheckId="CA1053">
+   <Name>Static holder types should not have constructors</Name>
+   <Description>Instances of types that define only static members do not need to be created. Many compilers will automatically add a public default constructor if no constructor is specified. To prevent this, adding an empty private constructor may be required.</Description>
+   <Resolution Name="Default">Remove the public constructors from {0}.</Resolution>
+   <Owner />
+   <Url>http://msdn2.microsoft.com/library/ms182169(VS.90).aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="90">Error</MessageLevel>
+   <File Name="DesignRules.dll" Version="9.0.0.0" />
+  </Rule>
+  <Rule TypeName="UriParametersShouldNotBeStrings" Category="Microsoft.Design" CheckId="CA1054">
+   <Name>URI parameters should not be strings</Name>
+   <Description>If a parameter name contains "uri" or "url" or "urn", and it's typed as string, the parameter type should be changed to System.Uri, unless there is an overload method where the same parameter is typed as System.Uri.</Description>
+   <Resolution Name="Default">Change the type of parameter {0} of method {1} from string to System.Uri, or provide an overload of {1}, that allows {0} to be passed as a System.Uri object.</Resolution>
+   <Owner />
+   <Url>http://msdn2.microsoft.com/library/ms182174(VS.90).aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="60">Error</MessageLevel>
+   <File Name="DesignRules.dll" Version="9.0.0.0" />
+  </Rule>
+  <Rule TypeName="UriPropertiesShouldNotBeStrings" Category="Microsoft.Design" CheckId="CA1056">
+   <Name>URI properties should not be strings</Name>
+   <Description>If a property name contains "uri" or "url" or "urn" and it's typed as string, it should be changed to System.Uri.</Description>
+   <Resolution Name="Default">Change the type of property {0} from string to System.Uri.</Resolution>
+   <Owner />
+   <Url>http://msdn2.microsoft.com/library/ms182175(VS.90).aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="75">Error</MessageLevel>
+   <File Name="DesignRules.dll" Version="9.0.0.0" />
+  </Rule>
+  <Rule TypeName="UriReturnValuesShouldNotBeStrings" Category="Microsoft.Design" CheckId="CA1055">
+   <Name>URI return values should not be strings</Name>
+   <Description>If a function name contains "uri" or "url" or "urn" and the return type is string, the return type should be changed to System.Uri.</Description>
+   <Resolution Name="Default">Change the return type of {0} from string to System.Uri.</Resolution>
+   <Owner />
+   <Url>http://msdn2.microsoft.com/library/ms182176(VS.90).aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="60">Error</MessageLevel>
+   <File Name="DesignRules.dll" Version="9.0.0.0" />
+  </Rule>
+  <Rule TypeName="UsePropertiesWhereAppropriate" Category="Microsoft.Design" CheckId="CA1024">
+   <Name>Use properties where appropriate</Name>
+   <Description>Properties should be used instead of Get/Set methods in most situations. Methods are preferable to properties in the following situations: the operation is a conversion, is expensive or has an observable side-effect; the order of execution is important; calling the member twice in succession creates different results; a member is static but returns a mutable value; or the member returns an array.</Description>
+   <Resolution Name="Default">Change {0} to a property if appropriate.</Resolution>
+   <Owner />
+   <Url>http://msdn2.microsoft.com/library/ms182181(VS.90).aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="75">Warning</MessageLevel>
+   <File Name="DesignRules.dll" Version="9.0.0.0" />
+  </Rule>
+ </Rules>
+ <Localized>
+  <String Key="Category">Category</String>
+  <String Key="Certainty">Certainty</String>
+  <String Key="CollapseAll">Collapse All</String>
+  <String Key="CheckId">Check Id</String>
+  <String Key="Error">Error</String>
+  <String Key="Errors">error(s)</String>
+  <String Key="ExpandAll">Expand All</String>
+  <String Key="Help">Help</String>
+  <String Key="Line">Line</String>
+  <String Key="Messages">message(s)</String>
+  <String Key="LocationNotStoredInPdb">[Location not stored in Pdb]</String>
+  <String Key="Project">Project</String>
+  <String Key="Resolution">Resolution</String>
+  <String Key="Rule">Rule</String>
+  <String Key="RuleFile">Rule File</String>
+  <String Key="RuleDescription">Rule Description</String>
+  <String Key="Source">Source</String>
+  <String Key="Status">Status</String>
+  <String Key="Target">Target</String>
+  <String Key="Warning">Warning</String>
+  <String Key="Warnings">warning(s)</String>
+  <String Key="ReportTitle">Code Analysis Report</String>
+ </Localized>
+ <Exceptions>
+  <Exception Keyword="CA0060" Kind="Engine" TreatAsWarning="True">
+   <Type>Microsoft.FxCop.Sdk.FxCopException</Type>
+   <ExceptionMessage>The indirectly-referenced assembly 'Microsoft.SharePoint.Library, Version=12.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c' could not be found. This assembly is not required for analysis, however, analysis results could be incomplete. This assembly was referenced by: 'Microsoft.SharePoint.dll'.</ExceptionMessage>
+  </Exception>
+  <Exception Keyword="CA0060" Kind="Engine" TreatAsWarning="True">
+   <Type>Microsoft.FxCop.Sdk.FxCopException</Type>
+   <ExceptionMessage>The indirectly-referenced assembly 'Microsoft.Web.Design.Server, Version=12.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c' could not be found. This assembly is not required for analysis, however, analysis results could be incomplete. This assembly was referenced by: 'Microsoft.SharePoint.dll'.</ExceptionMessage>
+  </Exception>
+ </Exceptions>
+</FxCopReport>

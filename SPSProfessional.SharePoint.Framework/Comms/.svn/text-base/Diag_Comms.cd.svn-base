@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="FullSignature">
+  <Comment CommentText="SPSParametersProvider is a subclass of SPSSchemaValue because is fully&#xD;&#xA;">
+    <Position X="2.406" Y="5.073" Height="0.75" Width="1.7" />
+  </Comment>
+  <Class Name="SPSProParts.SharePoint.Framework.Comms.SPSDataValuesCollection">
+    <Position X="8.75" Y="0.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Comms\SPSDataValues.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SPSProParts.SharePoint.Framework.Comms.SPSSchemaBuilder">
+    <Position X="0.5" Y="0.5" Width="3" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAEAACAAAAAAAAAAAAAEAACAAoBAAAAAAAAAAAA=</HashCode>
+      <FileName>Comms\SPSSchemaBuilder.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="SPSProParts.SharePoint.Framework.Comms.SPSSchema">
+    <Position X="4.25" Y="0.5" Width="4" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAgAAAAAAAAAAAAACAAAAAAAAAACAAAAAAAA=</HashCode>
+      <FileName>Comms\SPSSchema.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SPSProParts.SharePoint.Framework.Comms.SPSSchemaValue">
+    <Position X="4.25" Y="3" Width="3.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Comms\SPSSchemaValue.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SPSProParts.SharePoint.Framework.Comms.SPSRowProvider">
+    <Position X="8.75" Y="1.75" Width="5.75" />
+    <TypeIdentifier>
+      <HashCode>AAABAAQAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIIA=</HashCode>
+      <FileName>Comms\SPSRowProvider.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="SPSProParts.SharePoint.Framework.Comms.SPSParametersProvider">
+    <Position X="4.25" Y="5" Width="4" />
+    <TypeIdentifier>
+      <HashCode>AAAAAABAAAAAAAAEAAAAEAAAAAAAAAAAAAAEAAAAAAA=</HashCode>
+      <FileName>Comms\SPSParametersProvider.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Font Name="Tahoma" Size="8.25" />
+</ClassDiagram>

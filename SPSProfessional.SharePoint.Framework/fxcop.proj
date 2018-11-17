@@ -1,0 +1,25 @@
+<Project DefaultTargets="FxCop" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+
+<PropertyGroup>
+<FxCopExe>c:\dev\bin\fxcop\fxcopcmd.exe</FxCopExe>
+</PropertyGroup>
+
+  <Target Name="FxCop"> 
+
+    <!-- Clean, then rebuild entire solution in debug mode-->
+    <MSBuild Projects="SPSPRofessional.SharePoint.Framework.csproj" Targets="Clean;Rebuild" Properties="Configuration=Debug" />   
+
+    <!-- Run FxCop analysis -->    
+    <Exec Command="$(FxCopExe) /project:FxCop.FxCop  /out:..\Artifact\FxCopReport.xmltemp /summary" IgnoreExitCode="true">
+      <Output TaskParameter="ExitCode" PropertyName="ErrorCode"/>
+    </Exec>
+    <Message Text="The exit code is $(ErrorCode)"/>
+    <Error Text="Error while executing FxCop" Condition="'$(ErrorCode)' > '0'" ContinueOnError="True" />     
+    <Error Text="Ignore 512" Condition="'$(ErrorCode)' == '512'" ContinueOnError="True" />
+    <OnError ExecuteTargets="MessageErrorHandler"/>
+  </Target>
+
+  <Target Name="MessageErrorHandler">
+        <Message Text="An error has occurred while executing SomeEXE"/>
+  </Target>
+</Project>

@@ -1,0 +1,27 @@
+﻿<?xml version="1.0"?>
+<Solution SolutionId="{336C4D96-11AA-4021-880F-C255D720AB12}"
+          xmlns="http://schemas.microsoft.com/sharepoint/">
+
+  <Assemblies>
+    <Assembly DeploymentTarget="GlobalAssemblyCache" 
+              Location="SPSProfessional.SharePoint.Framework.dll">      
+      <SafeControls>
+        <SafeControl
+         Assembly="SPSProfessional.SharePoint.Framework, Version=2.0.0.0, Culture=neutral,  PublicKeyToken=4031063ddba1c7c7"
+         Namespace="SPSProfessional.SharePoint.Framework"
+         TypeName="*"
+        />       
+      </SafeControls>
+    </Assembly>    
+  </Assemblies>
+
+  <RootFiles>
+    <RootFile Location="Resources\SPSProfessional.SharePoint.Framework.resx" />
+    <RootFile Location="Resources\SPSProfessional.SharePoint.Framework.en-US.resx" />
+    <RootFile Location="Resources\SPSProfessional.SharePoint.Framework.es-ES.resx" />
+  </RootFiles>
+  
+</Solution>
+
+
+

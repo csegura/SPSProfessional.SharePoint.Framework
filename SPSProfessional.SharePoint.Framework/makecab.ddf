@@ -1,0 +1,19 @@
+﻿.OPTION EXPLICIT     
+.Set CabinetNameTemplate=SPSProfessional.SharePoint.Framework.2.0.wsp 
+.set DiskDirectoryTemplate=CDROM 
+.Set CompressionType=MSZIP
+.Set UniqueFiles="ON"
+.Set Cabinet=on
+.Set DiskDirectory1=_Build
+
+; Manifest
+manifest_wsp.xml manifest.xml
+
+; Binary files
+bin\Debug\SPSProfessional.SharePoint.Framework.dll						SPSProfessional.SharePoint.Framework.dll
+
+; Resources
+Resources\SPSProfessional.SharePoint.Framework.resx					Resources\SPSProfessional.SharePoint.Framework.resx
+Resources\SPSProfessional.SharePoint.Framework.en-US.resx			Resources\SPSProfessional.SharePoint.Framework.en-US.resx
+Resources\SPSProfessional.SharePoint.Framework.es-ES.resx			Resources\SPSProfessional.SharePoint.Framework.es-ES.resx
+

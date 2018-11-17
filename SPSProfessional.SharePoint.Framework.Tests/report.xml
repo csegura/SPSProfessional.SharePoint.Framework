@@ -1,0 +1,300 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!--This file represents the results of running a test suite-->
+<test-results name="bin\Debug\SPSProfessional.SharePoint.Framework.Tests.dll" total="79" failures="18" not-run="0" date="2008-09-14" time="23:21:09">
+  <environment nunit-version="2.4.8.0" clr-version="2.0.50727.1433" os-version="Microsoft Windows NT 5.2.3790 Service Pack 2" platform="Win32NT" cwd="C:\DEV\SPSProfessional2\SPSProfessional.SharePoint.Framework\SPSProfessional.SharePoint.Framework.Tests" machine-name="W2K3" user="Administrator" user-domain="W2K3" />
+  <culture-info current-culture="es-ES" current-uiculture="en-US" />
+  <test-suite name="bin\Debug\SPSProfessional.SharePoint.Framework.Tests.dll" success="False" time="2.297" asserts="0">
+    <results>
+      <test-suite name="SPSProfessional" success="False" time="2.234" asserts="0">
+        <results>
+          <test-suite name="SharePoint" success="False" time="2.234" asserts="0">
+            <results>
+              <test-suite name="Framework" success="False" time="2.188" asserts="0">
+                <results>
+                  <test-suite name="Tests" success="False" time="2.188" asserts="0">
+                    <results>
+                      <test-suite name="Common" success="True" time="0.063" asserts="0">
+                        <results>
+                          <test-suite name="SPSKeyvalueList_Tests" success="True" time="0.016" asserts="0">
+                            <results>
+                              <test-case name="SPSProfessional.SharePoint.Framework.Tests.Common.SPSKeyvalueList_Tests.Add" executed="True" success="True" time="0.000" asserts="3" />
+                              <test-case name="SPSProfessional.SharePoint.Framework.Tests.Common.SPSKeyvalueList_Tests.AddKeyValuePair" executed="True" success="True" time="0.000" asserts="5" />
+                              <test-case name="SPSProfessional.SharePoint.Framework.Tests.Common.SPSKeyvalueList_Tests.Constructor" executed="True" success="True" time="0.000" asserts="1" />
+                              <test-case name="SPSProfessional.SharePoint.Framework.Tests.Common.SPSKeyvalueList_Tests.Contains" executed="True" success="True" time="0.000" asserts="2" />
+                              <test-case name="SPSProfessional.SharePoint.Framework.Tests.Common.SPSKeyvalueList_Tests.Index" executed="True" success="True" time="0.000" asserts="2" />
+                              <test-case name="SPSProfessional.SharePoint.Framework.Tests.Common.SPSKeyvalueList_Tests.ReplaceAllValues" executed="True" success="True" time="0.000" asserts="2" />
+                              <test-case name="SPSProfessional.SharePoint.Framework.Tests.Common.SPSKeyvalueList_Tests.ReplaceValue" executed="True" success="True" time="0.000" asserts="5" />
+                              <test-case name="SPSProfessional.SharePoint.Framework.Tests.Common.SPSKeyvalueList_Tests.SerializeDeserialize" executed="True" success="True" time="0.000" asserts="6" />
+                            </results>
+                          </test-suite>
+                          <test-suite name="SPSKeyValuePair_Tests" success="True" time="0.016" asserts="0">
+                            <results>
+                              <test-case name="SPSProfessional.SharePoint.Framework.Tests.Common.SPSKeyValuePair_Tests.Constructor" executed="True" success="True" time="0.000" asserts="2" />
+                              <test-case name="SPSProfessional.SharePoint.Framework.Tests.Common.SPSKeyValuePair_Tests.ConstructorWithNullKey" executed="True" success="True" time="0.016" asserts="0" />
+                              <test-case name="SPSProfessional.SharePoint.Framework.Tests.Common.SPSKeyValuePair_Tests.ConstructorWithNullValue" executed="True" success="True" time="0.000" asserts="2" />
+                              <test-case name="SPSProfessional.SharePoint.Framework.Tests.Common.SPSKeyValuePair_Tests.Use" executed="True" success="True" time="0.000" asserts="2" />
+                            </results>
+                          </test-suite>
+                          <test-suite name="SPSSerialization_Tests" success="True" time="0.000" asserts="0">
+                            <results>
+                              <test-case name="SPSProfessional.SharePoint.Framework.Tests.Common.SPSSerialization_Tests.SerializeDeserialize" executed="True" success="True" time="0.000" asserts="5" />
+                            </results>
+                          </test-suite>
+                        </results>
+                      </test-suite>
+                      <test-suite name="Comms" success="True" time="0.422" asserts="0">
+                        <results>
+                          <test-suite name="SPSDataValues_Tests" success="True" time="0.000" asserts="0">
+                            <results>
+                              <test-case name="SPSProfessional.SharePoint.Framework.Tests.Comms.SPSDataValues_Tests.Constructor" executed="True" success="True" time="0.000" asserts="0" />
+                            </results>
+                          </test-suite>
+                          <test-suite name="SPSParametersProvider_Tests" success="True" time="0.234" asserts="0">
+                            <results>
+                              <test-case name="SPSProfessional.SharePoint.Framework.Tests.Comms.SPSParametersProvider_Tests.GetParametersData" executed="True" success="True" time="0.094" asserts="3" />
+                              <test-case name="SPSProfessional.SharePoint.Framework.Tests.Comms.SPSParametersProvider_Tests.SetConsumerSchema" executed="True" success="True" time="0.000" asserts="1" />
+                              <test-case name="SPSProfessional.SharePoint.Framework.Tests.Comms.SPSParametersProvider_Tests.SetConsumerSchemaNullArgs" executed="True" success="True" time="0.000" asserts="2" />
+                              <test-case name="SPSProfessional.SharePoint.Framework.Tests.Comms.SPSParametersProvider_Tests.ToStringTest" executed="True" success="True" time="0.000" asserts="1" />
+                            </results>
+                          </test-suite>
+                          <test-suite name="SPSRowProvider_Tests" success="True" time="0.031" asserts="0">
+                            <results>
+                              <test-case name="SPSProfessional.SharePoint.Framework.Tests.Comms.SPSRowProvider_Tests.Callback" executed="True" success="True" time="0.016" asserts="4" />
+                              <test-case name="SPSProfessional.SharePoint.Framework.Tests.Comms.SPSRowProvider_Tests.Callback_WhitNullRowView" executed="True" success="True" time="0.000" asserts="4" />
+                              <test-case name="SPSProfessional.SharePoint.Framework.Tests.Comms.SPSRowProvider_Tests.Constructor_FromDataTable" executed="True" success="True" time="0.016" asserts="2" />
+                              <test-case name="SPSProfessional.SharePoint.Framework.Tests.Comms.SPSRowProvider_Tests.Constructor_FromSPSSchemaValueBuilder" executed="True" success="True" time="0.000" asserts="2" />
+                            </results>
+                          </test-suite>
+                          <test-suite name="SPSSchema_Tests" success="True" time="0.125" asserts="0">
+                            <results>
+                              <test-case name="SPSProfessional.SharePoint.Framework.Tests.Comms.SPSSchema_Tests.AddParameter_All" executed="True" success="True" time="0.047" asserts="54" />
+                              <test-case name="SPSProfessional.SharePoint.Framework.Tests.Comms.SPSSchema_Tests.AddParameter_StringType_All" executed="True" success="True" time="0.000" asserts="54" />
+                              <test-case name="SPSProfessional.SharePoint.Framework.Tests.Comms.SPSSchema_Tests.AddParameterSql_All" executed="True" success="True" time="0.016" asserts="72" />
+                              <test-case name="SPSProfessional.SharePoint.Framework.Tests.Comms.SPSSchema_Tests.AddParameterSql_BadType" executed="True" success="True" time="0.000" asserts="0" />
+                              <test-case name="SPSProfessional.SharePoint.Framework.Tests.Comms.SPSSchema_Tests.AddParameterSql_DuplicateType" executed="True" success="True" time="0.016" asserts="0" />
+                              <test-case name="SPSProfessional.SharePoint.Framework.Tests.Comms.SPSSchema_Tests.AddParameterSql_NullParameter_All" executed="True" success="True" time="0.000" asserts="48" />
+                              <test-case name="SPSProfessional.SharePoint.Framework.Tests.Comms.SPSSchema_Tests.AddParameterSql_NullType" executed="True" success="True" time="0.016" asserts="0" />
+                              <test-case name="SPSProfessional.SharePoint.Framework.Tests.Comms.SPSSchema_Tests.AddParameterSql_StringType_All" executed="True" success="True" time="0.000" asserts="72" />
+                              <test-case name="SPSProfessional.SharePoint.Framework.Tests.Comms.SPSSchema_Tests.Constructor" executed="True" success="True" time="0.000" asserts="3" />
+                              <test-case name="SPSProfessional.SharePoint.Framework.Tests.Comms.SPSSchema_Tests.GetTypeFromSqlDbType_All" executed="True" success="True" time="0.016" asserts="48" />
+                              <test-case name="SPSProfessional.SharePoint.Framework.Tests.Comms.SPSSchema_Tests.GetTypeFromSqlDbType_InvalidTypes_All" executed="True" success="True" time="0.000" asserts="8" />
+                            </results>
+                          </test-suite>
+                          <test-suite name="SPSSchemaBuilder_Tests" success="True" time="0.000" asserts="0">
+                            <results>
+                              <test-case name="SPSProfessional.SharePoint.Framework.Tests.Comms.SPSSchemaBuilder_Tests.Constructor" executed="True" success="True" time="0.000" asserts="5" />
+                            </results>
+                          </test-suite>
+                          <test-suite name="SPSSchemaValue_Tests" success="True" time="0.031" asserts="0">
+                            <results>
+                              <test-case name="SPSProfessional.SharePoint.Framework.Tests.Comms.SPSSchemaValue_Tests.AddData_Value" executed="True" success="True" time="0.000" asserts="1" />
+                              <test-case name="SPSProfessional.SharePoint.Framework.Tests.Comms.SPSSchemaValue_Tests.AddDataValue" executed="True" success="True" time="0.016" asserts="30" />
+                              <test-case name="SPSProfessional.SharePoint.Framework.Tests.Comms.SPSSchemaValue_Tests.AddDataValue_NullParameter" executed="True" success="True" time="0.000" asserts="0" />
+                              <test-case name="SPSProfessional.SharePoint.Framework.Tests.Comms.SPSSchemaValue_Tests.AddDataValue_NullValue" executed="True" success="True" time="0.000" asserts="2" />
+                              <test-case name="SPSProfessional.SharePoint.Framework.Tests.Comms.SPSSchemaValue_Tests.AddDataValue_NullValueObject" executed="True" success="True" time="0.000" asserts="2" />
+                            </results>
+                          </test-suite>
+                          <test-suite name="SPSSerialization_Tests" success="True" time="0.000" asserts="0">
+                            <results>
+                              <test-case name="SPSProfessional.SharePoint.Framework.Tests.Comms.SPSSerialization_Tests.SerializeDeserialize" executed="True" success="True" time="0.000" asserts="5" />
+                            </results>
+                          </test-suite>
+                        </results>
+                      </test-suite>
+                      <test-suite name="Error" success="True" time="0.031" asserts="0">
+                        <results>
+                          <test-suite name="SPSConfigErrorCollection_Tests" success="True" time="0.000" asserts="0">
+                            <results>
+                              <test-case name="SPSProfessional.SharePoint.Framework.Tests.Error.SPSConfigErrorCollection_Tests.Add" executed="True" success="True" time="0.000" asserts="2" />
+                              <test-case name="SPSProfessional.SharePoint.Framework.Tests.Error.SPSConfigErrorCollection_Tests.Constructor" executed="True" success="True" time="0.000" asserts="1" />
+                              <test-case name="SPSProfessional.SharePoint.Framework.Tests.Error.SPSConfigErrorCollection_Tests.Insert" executed="True" success="True" time="0.000" asserts="2" />
+                              <test-case name="SPSProfessional.SharePoint.Framework.Tests.Error.SPSConfigErrorCollection_Tests.Remove" executed="True" success="True" time="0.000" asserts="1" />
+                            </results>
+                          </test-suite>
+                          <test-suite name="SPSConfigErrors_Test" success="True" time="0.000" asserts="0">
+                            <results>
+                              <test-case name="SPSProfessional.SharePoint.Framework.Tests.Error.SPSConfigErrors_Test.Add" executed="True" success="True" time="0.000" asserts="2" />
+                              <test-case name="SPSProfessional.SharePoint.Framework.Tests.Error.SPSConfigErrors_Test.AddNull" executed="True" success="True" time="0.000" asserts="1" />
+                              <test-case name="SPSProfessional.SharePoint.Framework.Tests.Error.SPSConfigErrors_Test.AddNull_AddsEmpty" executed="True" success="True" time="0.000" asserts="3" />
+                              <test-case name="SPSProfessional.SharePoint.Framework.Tests.Error.SPSConfigErrors_Test.Clear" executed="True" success="True" time="0.000" asserts="1" />
+                              <test-case name="SPSProfessional.SharePoint.Framework.Tests.Error.SPSConfigErrors_Test.Constructor" executed="True" success="True" time="0.000" asserts="1" />
+                              <test-case name="SPSProfessional.SharePoint.Framework.Tests.Error.SPSConfigErrors_Test.Iterator" executed="True" success="True" time="0.000" asserts="1" />
+                              <test-case name="SPSProfessional.SharePoint.Framework.Tests.Error.SPSConfigErrors_Test.Remove" executed="True" success="True" time="0.000" asserts="1" />
+                              <test-case name="SPSProfessional.SharePoint.Framework.Tests.Error.SPSConfigErrors_Test.ToStringTest" executed="True" success="True" time="0.000" asserts="1" />
+                            </results>
+                          </test-suite>
+                          <test-suite name="SPSErrorArgs_Tests" success="True" time="0.000" asserts="0">
+                            <results>
+                              <test-case name="SPSProfessional.SharePoint.Framework.Tests.Error.SPSErrorArgs_Tests.Constructor" executed="True" success="True" time="0.000" asserts="1" />
+                              <test-case name="SPSProfessional.SharePoint.Framework.Tests.Error.SPSErrorArgs_Tests.ConstructorBadParams" executed="True" success="True" time="0.000" asserts="1" />
+                              <test-case name="SPSProfessional.SharePoint.Framework.Tests.Error.SPSErrorArgs_Tests.ConstructorDevelopper" executed="True" success="True" time="0.000" asserts="1" />
+                              <test-case name="SPSProfessional.SharePoint.Framework.Tests.Error.SPSErrorArgs_Tests.Use" executed="True" success="True" time="0.000" asserts="5" />
+                            </results>
+                          </test-suite>
+                          <test-suite name="SPSException_Test" success="True" time="0.016" asserts="0">
+                            <results>
+                              <test-case name="SPSProfessional.SharePoint.Framework.Tests.Error.SPSException_Test.Constructor" executed="True" success="True" time="0.000" asserts="0" />
+                              <test-case name="SPSProfessional.SharePoint.Framework.Tests.Error.SPSException_Test.Constructor2" executed="True" success="True" time="0.000" asserts="1" />
+                              <test-case name="SPSProfessional.SharePoint.Framework.Tests.Error.SPSException_Test.Constructor3" executed="True" success="True" time="0.016" asserts="1" />
+                            </results>
+                          </test-suite>
+                          <test-suite name="SPSStackErrors_Tests" success="True" time="0.000" asserts="0">
+                            <results>
+                              <test-case name="SPSProfessional.SharePoint.Framework.Tests.Error.SPSStackErrors_Tests.Constructor" executed="True" success="True" time="0.000" asserts="1" />
+                            </results>
+                          </test-suite>
+                        </results>
+                      </test-suite>
+                      <test-suite name="Tools" success="False" time="1.641" asserts="0">
+                        <results>
+                          <test-suite name="SPSEvaluator_Tests" success="True" time="0.766" asserts="0">
+                            <results>
+                              <test-case name="SPSProfessional.SharePoint.Framework.Tests.Tools.SPSEvaluator_Tests.EvaluateFunctions" executed="True" success="True" time="0.766" asserts="9" />
+                            </results>
+                          </test-suite>
+                          <test-suite name="SPSXsltExtension_Test" success="False" time="0.875" asserts="0">
+                            <failure>
+                              <message><![CDATA[TypeMock.TypeMockException : 
+*** Typemock Isolator is not currently enabled. 
+To enable do one of the following:
+
+* To run Typemock Isolator as part of an automated process you can:
+   - run tests via TMockRunner.exe command line tool
+   - use 'TypeMockStart' tasks for MSBuild or NAnt
+
+* To work with Typemock Isolator inside Visual Studio.NET:
+        set Tools->Enable Typemock Isolator from within Visual Studio
+
+For more information consult the documentation (see 'Running' topic)]]></message>
+                              <stack-trace><![CDATA[at TypeMock.MockManager.Init(Boolean collectAllCalls)
+at TypeMock.MockManager.e(Type A_0)
+at TypeMock.MockManager.Mock(Type type, Constructor mockConstructors)
+at TypeMock.MockManager.MockObject(Type type, Constructor mockConstructors, Object[] args)
+at TypeMock.MockManager.MockObject[TMockedType](Constructor mockConstructors)
+at SPSProfessional.SharePoint.Framework.Tests.Tools.SPSXsltExtension_Test..ctor() in C:\DEV\SPSProfessional2\SPSProfessional.SharePoint.Framework\SPSProfessional.SharePoint.Framework.Tests\Tools\SPSXsltExtension_Test.cs:line 26
+]]></stack-trace>
+                            </failure>
+                            <results>
+                              <test-case name="SPSProfessional.SharePoint.Framework.Tests.Tools.SPSXsltExtension_Test.CounterTest" executed="True" success="False" time="0.000" asserts="0">
+                                <failure>
+                                  <message><![CDATA[TestFixtureSetUp failed in SPSXsltExtension_Test]]></message>
+                                  <stack-trace />
+                                </failure>
+                              </test-case>
+                              <test-case name="SPSProfessional.SharePoint.Framework.Tests.Tools.SPSXsltExtension_Test.DateDiffTest" executed="True" success="False" time="0.000" asserts="0">
+                                <failure>
+                                  <message><![CDATA[TestFixtureSetUp failed in SPSXsltExtension_Test]]></message>
+                                  <stack-trace />
+                                </failure>
+                              </test-case>
+                              <test-case name="SPSProfessional.SharePoint.Framework.Tests.Tools.SPSXsltExtension_Test.EcmaScriptEncodeTest" executed="True" success="False" time="0.000" asserts="0">
+                                <failure>
+                                  <message><![CDATA[TestFixtureSetUp failed in SPSXsltExtension_Test]]></message>
+                                  <stack-trace />
+                                </failure>
+                              </test-case>
+                              <test-case name="SPSProfessional.SharePoint.Framework.Tests.Tools.SPSXsltExtension_Test.EventControlIDTest" executed="True" success="False" time="0.000" asserts="0">
+                                <failure>
+                                  <message><![CDATA[TestFixtureSetUp failed in SPSXsltExtension_Test]]></message>
+                                  <stack-trace />
+                                </failure>
+                              </test-case>
+                              <test-case name="SPSProfessional.SharePoint.Framework.Tests.Tools.SPSXsltExtension_Test.EventJSTest" executed="True" success="False" time="0.000" asserts="0">
+                                <failure>
+                                  <message><![CDATA[TestFixtureSetUp failed in SPSXsltExtension_Test]]></message>
+                                  <stack-trace />
+                                </failure>
+                              </test-case>
+                              <test-case name="SPSProfessional.SharePoint.Framework.Tests.Tools.SPSXsltExtension_Test.EventTest" executed="True" success="False" time="0.000" asserts="0">
+                                <failure>
+                                  <message><![CDATA[TestFixtureSetUp failed in SPSXsltExtension_Test]]></message>
+                                  <stack-trace />
+                                </failure>
+                              </test-case>
+                              <test-case name="SPSProfessional.SharePoint.Framework.Tests.Tools.SPSXsltExtension_Test.FormatDateTimeTest" executed="True" success="False" time="0.000" asserts="0">
+                                <failure>
+                                  <message><![CDATA[TestFixtureSetUp failed in SPSXsltExtension_Test]]></message>
+                                  <stack-trace />
+                                </failure>
+                              </test-case>
+                              <test-case name="SPSProfessional.SharePoint.Framework.Tests.Tools.SPSXsltExtension_Test.FormatIsoDateTimeTest" executed="True" success="False" time="0.000" asserts="0">
+                                <failure>
+                                  <message><![CDATA[TestFixtureSetUp failed in SPSXsltExtension_Test]]></message>
+                                  <stack-trace />
+                                </failure>
+                              </test-case>
+                              <test-case name="SPSProfessional.SharePoint.Framework.Tests.Tools.SPSXsltExtension_Test.GetCalColorTest" executed="True" success="False" time="0.000" asserts="0">
+                                <failure>
+                                  <message><![CDATA[TestFixtureSetUp failed in SPSXsltExtension_Test]]></message>
+                                  <stack-trace />
+                                </failure>
+                              </test-case>
+                              <test-case name="SPSProfessional.SharePoint.Framework.Tests.Tools.SPSXsltExtension_Test.GetFcColorTest" executed="True" success="False" time="0.000" asserts="0">
+                                <failure>
+                                  <message><![CDATA[TestFixtureSetUp failed in SPSXsltExtension_Test]]></message>
+                                  <stack-trace />
+                                </failure>
+                              </test-case>
+                              <test-case name="SPSProfessional.SharePoint.Framework.Tests.Tools.SPSXsltExtension_Test.GetFileExtensionTest" executed="True" success="False" time="0.000" asserts="0">
+                                <failure>
+                                  <message><![CDATA[TestFixtureSetUp failed in SPSXsltExtension_Test]]></message>
+                                  <stack-trace />
+                                </failure>
+                              </test-case>
+                              <test-case name="SPSProfessional.SharePoint.Framework.Tests.Tools.SPSXsltExtension_Test.GetStringBeforeSeparatorTest" executed="True" success="False" time="0.000" asserts="0">
+                                <failure>
+                                  <message><![CDATA[TestFixtureSetUp failed in SPSXsltExtension_Test]]></message>
+                                  <stack-trace />
+                                </failure>
+                              </test-case>
+                              <test-case name="SPSProfessional.SharePoint.Framework.Tests.Tools.SPSXsltExtension_Test.IfNewTest" executed="True" success="False" time="0.000" asserts="0">
+                                <failure>
+                                  <message><![CDATA[TestFixtureSetUp failed in SPSXsltExtension_Test]]></message>
+                                  <stack-trace />
+                                </failure>
+                              </test-case>
+                              <test-case name="SPSProfessional.SharePoint.Framework.Tests.Tools.SPSXsltExtension_Test.iifFalseTest" executed="True" success="False" time="0.000" asserts="0">
+                                <failure>
+                                  <message><![CDATA[TestFixtureSetUp failed in SPSXsltExtension_Test]]></message>
+                                  <stack-trace />
+                                </failure>
+                              </test-case>
+                              <test-case name="SPSProfessional.SharePoint.Framework.Tests.Tools.SPSXsltExtension_Test.iifTrueTest" executed="True" success="False" time="0.000" asserts="0">
+                                <failure>
+                                  <message><![CDATA[TestFixtureSetUp failed in SPSXsltExtension_Test]]></message>
+                                  <stack-trace />
+                                </failure>
+                              </test-case>
+                              <test-case name="SPSProfessional.SharePoint.Framework.Tests.Tools.SPSXsltExtension_Test.LastRowNoKeyTest" executed="True" success="False" time="0.000" asserts="0">
+                                <failure>
+                                  <message><![CDATA[TestFixtureSetUp failed in SPSXsltExtension_Test]]></message>
+                                  <stack-trace />
+                                </failure>
+                              </test-case>
+                              <test-case name="SPSProfessional.SharePoint.Framework.Tests.Tools.SPSXsltExtension_Test.LastRowTest" executed="True" success="False" time="0.000" asserts="0">
+                                <failure>
+                                  <message><![CDATA[TestFixtureSetUp failed in SPSXsltExtension_Test]]></message>
+                                  <stack-trace />
+                                </failure>
+                              </test-case>
+                              <test-case name="SPSProfessional.SharePoint.Framework.Tests.Tools.SPSXsltExtension_Test.LimitTest" executed="True" success="False" time="0.000" asserts="0">
+                                <failure>
+                                  <message><![CDATA[TestFixtureSetUp failed in SPSXsltExtension_Test]]></message>
+                                  <stack-trace />
+                                </failure>
+                              </test-case>
+                            </results>
+                          </test-suite>
+                        </results>
+                      </test-suite>
+                    </results>
+                  </test-suite>
+                </results>
+              </test-suite>
+            </results>
+          </test-suite>
+        </results>
+      </test-suite>
+    </results>
+  </test-suite>
+</test-results>
